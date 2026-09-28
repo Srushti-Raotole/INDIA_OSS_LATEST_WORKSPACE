@@ -1,4 +1,3 @@
-// src/utils/responsive.ts
 import { useTheme, useMediaQuery } from '@mui/material';
 
 export const useResponsive = () => {

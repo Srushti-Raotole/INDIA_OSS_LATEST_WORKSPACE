@@ -11,3 +11,15 @@ export const store = configureStore({
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
+export interface User {
+  userName: string;
+  roles: string[];   
+}
+
+interface UserState {
+  user: User | null;
+}
+
+const initialState: UserState = {
+  user: null,
+};

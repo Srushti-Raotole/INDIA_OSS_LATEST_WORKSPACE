@@ -1,4 +1,3 @@
-// src/utils/useRouteNavigator.ts
 import { useNavigate } from "react-router-dom";
 
 const useRouteNavigator = () => {

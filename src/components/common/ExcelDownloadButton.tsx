@@ -1,156 +1,458 @@
+// import React, { useState } from "react";
+// import {
+//   IconButton,
+//   Menu,
+//   MenuItem,
+//   Tooltip,
+//   Box,
+//   Typography,
+// } from "@mui/material";
+// import ViewColumnIcon from "@mui/icons-material/ViewColumn";
+// import TableChartIcon from "@mui/icons-material/TableChart";
+
+// import xlsIcon from "../../assets/xls.png";
+// import { downloadExcel } from "../../utils/excelUtils";
+// import axiosClient from "@/api/axiosClient";
+
+// /* ================= TYPES ================= */
+// interface ExcelDownloadButtonProps {
+//   /** Existing local-table export */
+//   data?: any[];
+//   columnOrder?: string[];
+//   tableId?: string;
+
+//   /** Row-wise API export (NEW) */
+//   fetchUrl?: string;
+//   fetchParams?: Record<string, string>;
+
+//   fileName?: string;
+//   disabled?: boolean;
+// }
+
+// const LOCALSTORAGE_PREFIX = "visible_columns_map_";
+
+// /* ================= COMPONENT ================= */
+// const ExcelDownloadButton: React.FC<ExcelDownloadButtonProps> = ({
+//   data = [],
+//   columnOrder = [],
+//   tableId,
+//   fetchUrl,
+//   fetchParams,
+//   fileName = "Export",
+//   disabled = false,
+// }) => {
+//   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+//   const open = Boolean(anchorEl);
+//   const isApiMode = Boolean(fetchUrl);
+
+//   /* ================= HELPERS ================= */
+//   const readVisibilityMap = (): Record<string, boolean> | null => {
+//     if (!tableId) return null;
+//     try {
+//       const raw = localStorage.getItem(`${LOCALSTORAGE_PREFIX}${tableId}`);
+//       if (!raw) return null;
+//       const parsed = JSON.parse(raw);
+//       return typeof parsed === "object" && !Array.isArray(parsed)
+//         ? parsed
+//         : null;
+//     } catch {
+//       return null;
+//     }
+//   };
+
+//   const getVisibleColumnsOrdered = (): string[] => {
+//     const visMap = readVisibilityMap();
+//     if (!visMap) return [...columnOrder];
+//     return columnOrder.filter((c) => visMap[c] !== false);
+//   };
+
+//   /* ================= API DOWNLOAD ================= */
+//   // const handleApiDownload = async () => {
+//   //   if (!fetchUrl) return;
+
+//   //   try {
+//   //     const qs = fetchParams
+//   //       ? "?" +
+//   //         new URLSearchParams(fetchParams).toString()
+//   //       : "";
+
+//   //     const res = await fetch(`${fetchUrl}${qs}`);
+//   //     if (!res.ok) throw new Error("API download failed");
+
+//   //     const json = await res.json();
+//   //     if (!Array.isArray(json) || json.length === 0) {
+//   //       alert("No data available");
+//   //       return;
+//   //     }
+
+//   //     downloadExcel(json, fileName);
+//   //     setAnchorEl(null);
+//   //   } catch (err) {
+//   //     console.error(err);
+//   //     alert("Failed to download Excel");
+//   //   }
+//   // };
+//   const handleApiDownload = async () => {
+//     if (!fetchUrl) return;
+
+//     try {
+//       const res = await axiosClient.get(fetchUrl, {
+//         params: fetchParams,
+//       });
+
+//       const json = res.data;
+
+//       if (!Array.isArray(json) || json.length === 0) {
+//         alert("No data available");
+//         return;
+//       }
+
+//       downloadExcel(json, fileName);
+//       setAnchorEl(null);
+//     } catch (err) {
+//       console.error(err);
+//       alert("Failed to download Excel");
+//     }
+//   };
+
+//   /* ================= LOCAL DATA DOWNLOAD ================= */
+//   const handleLocalDownload = (type: "selected" | "all") => {
+//     if (!data.length) return;
+
+//     let exportColumns: string[];
+
+//     if (type === "all") {
+//       const allKeys = Array.from(
+//         new Set(data.flatMap((r: any) => Object.keys(r)))
+//       );
+//       exportColumns = [
+//         ...columnOrder.filter((k) => allKeys.includes(k)),
+//         ...allKeys.filter((k) => !columnOrder.includes(k)),
+//       ];
+//     } else {
+//       exportColumns = getVisibleColumnsOrdered();
+//     }
+
+//     const exportData = data.map((row: any) => {
+//       const out: Record<string, any> = {};
+//       exportColumns.forEach((k) => (out[k] = row?.[k]));
+//       return out;
+//     });
+
+//     downloadExcel(exportData, `${fileName}_${type}`);
+//     setAnchorEl(null);
+//   };
+
+//   /* ================= RENDER ================= */
+//   return (
+//     <>
+//       <Tooltip title="Download Excel">
+//         <span>
+//           <IconButton
+//             size="small"
+//             disabled={disabled}
+//             onClick={(e) => setAnchorEl(e.currentTarget)}
+//             sx={{ p: 0.5 }}
+//           >
+//             <img
+//               src={xlsIcon}
+//               alt="Excel"
+//               style={{
+//                 width: 24,
+//                 height: 27,
+//                 opacity: disabled ? 0.4 : 1,
+//               }}
+//             />
+//           </IconButton>
+//         </span>
+//       </Tooltip>
+
+//       <Menu
+//         anchorEl={anchorEl}
+//         open={open}
+//         onClose={() => setAnchorEl(null)}
+//         PaperProps={{
+//           sx: {
+//             borderRadius: 2,
+//             minWidth: 260,
+//             px: 1,
+//             py: 0.5,
+//           },
+//         }}
+//       >
+//         {/* ===== API MODE ===== */}
+//         {isApiMode && (
+//           <MenuItem
+//             onClick={handleApiDownload}
+//             sx={{ borderRadius: 1 }}
+//           >
+//             <TableChartIcon fontSize="small" sx={{ mr: 1 }} />
+//             <Typography fontSize="0.85rem" fontWeight={600}>
+//               Download Excel
+//             </Typography>
+//           </MenuItem>
+//         )}
+
+//         {/* ===== LOCAL DATA MODE ===== */}
+//         {!isApiMode && (
+//           <>
+//             <MenuItem
+//               onClick={() => handleLocalDownload("selected")}
+//               sx={{ borderRadius: 1 }}
+//             >
+//               <ViewColumnIcon fontSize="small" sx={{ mr: 1 }} />
+//               <Typography fontSize="0.85rem" fontWeight={600}>
+//                 Visible Columns
+//               </Typography>
+//             </MenuItem>
+
+//             <MenuItem
+//               onClick={() => handleLocalDownload("all")}
+//               sx={{ borderRadius: 1 }}
+//             >
+//               <TableChartIcon fontSize="small" sx={{ mr: 1 }} />
+//               <Typography fontSize="0.85rem" fontWeight={600}>
+//                 All Columns
+//               </Typography>
+//             </MenuItem>
+//           </>
+//         )}
+//       </Menu>
+//     </>
+//   );
+// };
+
+// export default ExcelDownloadButton;
+
 import React, { useState } from "react";
-import { IconButton, Tooltip, Menu, MenuItem, Fade } from "@mui/material";
+import {
+  IconButton,
+  Menu,
+  MenuItem,
+  Tooltip,
+  Box,
+  Typography,
+} from "@mui/material";
+import ViewColumnIcon from "@mui/icons-material/ViewColumn";
+import TableChartIcon from "@mui/icons-material/TableChart";
+
 import xlsIcon from "../../assets/xls.png";
 import { downloadExcel } from "../../utils/excelUtils";
+import axiosClient from "@/api/axiosClient";
 
+/* ================= TYPES ================= */
 interface ExcelDownloadButtonProps {
-  /** Data as shown in the table (rows of objects) */
-  data: any[];
-  /** Column order used in the table; we’ll honor this order in the export */
-  columnOrder: string[];
-  /** MUST match the table's tableId so we read the same visibility state */
-  tableId: string;
+  /** Existing local-table export */
+  data?: any[];
+  columnOrder?: string[];
+  tableId?: string;
+
+  /** Row-wise API export (NEW) */
+  fetchUrl?: string;
+  fetchParams?: Record<string, string>;
+
   fileName?: string;
-  tooltip?: string;
   disabled?: boolean;
 }
+
 const LOCALSTORAGE_PREFIX = "visible_columns_map_";
+
+/* ================= CSV / EXCEL INJECTION SANITIZATION =================
+ * Excel/Sheets treat any cell value starting with =, +, -, @ (and \t, \r)
+ * as the start of a formula. Prefixing such values with a single quote
+ * forces spreadsheet apps to render them as plain text instead of
+ * executing them. This must run on every user-controlled value before
+ * it is written to an exported file.
+ * ======================================================================= */
+const RISKY_LEADING_CHARS = ["=", "+", "@", "\t", "\r"];
+
+const sanitizeCellValue = (value: unknown): unknown => {
+  if (typeof value !== "string" || value.length === 0) return value;
+  if (RISKY_LEADING_CHARS.includes(value[0])) {
+    return `'${value}`;
+  }
+  return value;
+};
+
+const sanitizeRowsForExport = <T extends Record<string, any>>(
+  rows: T[],
+): T[] => {
+  return rows.map((row) => {
+    const sanitizedRow: Record<string, any> = {};
+    for (const key of Object.keys(row)) {
+      sanitizedRow[key] = sanitizeCellValue(row[key]);
+    }
+    return sanitizedRow as T;
+  });
+};
+
+/* ================= COMPONENT ================= */
 const ExcelDownloadButton: React.FC<ExcelDownloadButtonProps> = ({
-  data,
-  columnOrder,
+  data = [],
+  columnOrder = [],
   tableId,
+  fetchUrl,
+  fetchParams,
   fileName = "Export",
-  // tooltip = "Download Excel",
   disabled = false,
 }) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+  const isApiMode = Boolean(fetchUrl);
 
-  const handleMouseEnter = (event: React.MouseEvent<HTMLElement>) => {
-    if (!disabled) setAnchorEl(event.currentTarget);
-  };
-  const handleMouseLeave = () => setAnchorEl(null);
-
-  /** Read the visibility map straight from localStorage (fresh each click). */
+  /* ================= HELPERS ================= */
   const readVisibilityMap = (): Record<string, boolean> | null => {
+    if (!tableId) return null;
     try {
       const raw = localStorage.getItem(`${LOCALSTORAGE_PREFIX}${tableId}`);
       if (!raw) return null;
       const parsed = JSON.parse(raw);
-      if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
-        return parsed as Record<string, boolean>;
-      }
-      return null;
+      return typeof parsed === "object" && !Array.isArray(parsed)
+        ? parsed
+        : null;
     } catch {
       return null;
     }
   };
 
-  /** Get the visible columns (ordered by columnOrder) from storage. */
   const getVisibleColumnsOrdered = (): string[] => {
     const visMap = readVisibilityMap();
-    if (!visMap) {
-      // if no saved map, assume all visible (common initial case)
-      return [...columnOrder];
-    }
-    return columnOrder.filter((col) => visMap[col] !== false); // true/undefined => visible; only explicit false is hidden
+    if (!visMap) return [...columnOrder];
+    return columnOrder.filter((c) => visMap[c] !== false);
   };
 
-  const handleDownload = (type: "selected" | "all") => {
-    if (!data || data.length === 0) {
+  /* ================= API DOWNLOAD ================= */
+  const handleApiDownload = async () => {
+    if (!fetchUrl) return;
+
+    try {
+      const res = await axiosClient.get(fetchUrl, {
+        params: fetchParams,
+      });
+
+      const json = res.data;
+
+      if (!Array.isArray(json) || json.length === 0) {
+        alert("No data available");
+        return;
+      }
+
+      //  Sanitize before export to prevent CSV/formula injection
+      const safeJson = sanitizeRowsForExport(json);
+
+      downloadExcel(safeJson, fileName);
       setAnchorEl(null);
-      return;
+    } catch (err) {
+      console.error(err);
+      alert("Failed to download Excel");
     }
+  };
+
+  /* ================= LOCAL DATA DOWNLOAD ================= */
+  const handleLocalDownload = (type: "selected" | "all") => {
+    if (!data.length) return;
 
     let exportColumns: string[];
+
     if (type === "all") {
-      // gather all keys seen across rows, but keep columnOrder first, then any extras (if any)
-      const allKeys = Array.from(new Set(data.flatMap((r: any) => Object.keys(r))));
-      const orderedKnown = columnOrder.filter((k) => allKeys.includes(k));
-      const extras = allKeys.filter((k) => !columnOrder.includes(k));
-      exportColumns = [...orderedKnown, ...extras];
+      const allKeys = Array.from(
+        new Set(data.flatMap((r: any) => Object.keys(r))),
+      );
+      exportColumns = [
+        ...columnOrder.filter((k) => allKeys.includes(k)),
+        ...allKeys.filter((k) => !columnOrder.includes(k)),
+      ];
     } else {
-      // "selected" => only visible columns, ordered by columnOrder
-      const visible = getVisibleColumnsOrdered();
-      if (!visible.length) {
-        console.warn("No visible columns found; exporting nothing.");
-        exportColumns = []; // explicit: empty set if user hid everything
-      } else {
-        exportColumns = visible;
-      }
+      exportColumns = getVisibleColumnsOrdered();
     }
 
-    // Build export rows with columns in the exact exportColumns order
     const exportData = data.map((row: any) => {
       const out: Record<string, any> = {};
       exportColumns.forEach((k) => (out[k] = row?.[k]));
       return out;
     });
 
-    const nameSuffix = type === "selected" ? "_selected" : "_all";
-    downloadExcel(exportData, `${fileName}${nameSuffix}`);
+    //  Sanitize before export to prevent CSV/formula injection
+    const safeExportData = sanitizeRowsForExport(exportData);
+
+    downloadExcel(safeExportData, `${fileName}_${type}`);
     setAnchorEl(null);
   };
 
+  /* ================= RENDER ================= */
   return (
-    <Tooltip title={""}>
-      <span
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        style={{ position: "relative", display: "inline-block" }}
+    <>
+      <Tooltip title="Download Excel">
+        <span>
+          <IconButton
+            size="small"
+            disabled={disabled}
+            onClick={(e) => setAnchorEl(e.currentTarget)}
+            sx={{ p: 0.5 }}
+          >
+            <img
+              src={xlsIcon}
+              alt="Excel"
+              style={{
+                width: 24,
+                height: 27,
+                opacity: disabled ? 0.4 : 1,
+              }}
+            />
+          </IconButton>
+        </span>
+      </Tooltip>
+
+      <Menu
+        anchorEl={anchorEl}
+        open={open}
+        onClose={() => setAnchorEl(null)}
+        PaperProps={{
+          sx: {
+            borderRadius: 2,
+            minWidth: 260,
+            px: 1,
+            py: 0.5,
+          },
+        }}
       >
-        <IconButton
-          color="success"
-          size="small"
-          disabled={disabled || !data || data.length === 0}
-        >
-          <img
-            src={xlsIcon}
-            alt="Download Excel"
-            style={{ width: 25, height: 25, cursor: "pointer", marginTop: 3, marginLeft: 22 }}
-          />
-        </IconButton>
-        <Menu
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleMouseLeave}
-          TransitionComponent={Fade}
-          PaperProps={{
-            onMouseEnter: () => { },
-            onMouseLeave: handleMouseLeave,
-            sx: {
-              borderRadius: "10px",
-              boxShadow: "0 3px 10px rgba(0,0,0,0.15)",
-              width: 240,
-              height: 0,
-              minHeight: 80,
-              py: 0.5,
-              px: 1,
-              '& .MuiMenuItem-root': {
-                fontSize: '0.85rem',
-                py: 0.8,
-                borderRadius: '6px',
-              },
-              '& .MuiMenuItem-root:hover': {
-                backgroundColor: '#f5f5f5',
-                fontWeight: 600,
-              },
-            },
-          }}
-        >
-          <MenuItem onClick={() => handleDownload("selected")}>
-            📘 Download Selected Columns
+        {/* ===== API MODE ===== */}
+        {isApiMode && (
+          <MenuItem onClick={handleApiDownload} sx={{ borderRadius: 1 }}>
+            <TableChartIcon fontSize="small" sx={{ mr: 1 }} />
+            <Typography fontSize="0.85rem" fontWeight={600}>
+              Download Excel
+            </Typography>
           </MenuItem>
-          <MenuItem onClick={() => handleDownload("all")}>
-            📗 Download All Columns
-          </MenuItem>
-        </Menu>
-      </span>
-    </Tooltip>
+        )}
+
+        {/* ===== LOCAL DATA MODE ===== */}
+        {!isApiMode && (
+          <>
+            <MenuItem
+              onClick={() => handleLocalDownload("selected")}
+              sx={{ borderRadius: 1 }}
+            >
+              <ViewColumnIcon fontSize="small" sx={{ mr: 1 }} />
+              <Typography fontSize="0.85rem" fontWeight={600}>
+                Visible Columns
+              </Typography>
+            </MenuItem>
+
+            <MenuItem
+              onClick={() => handleLocalDownload("all")}
+              sx={{ borderRadius: 1 }}
+            >
+              <TableChartIcon fontSize="small" sx={{ mr: 1 }} />
+              <Typography fontSize="0.85rem" fontWeight={600}>
+                All Columns
+              </Typography>
+            </MenuItem>
+          </>
+        )}
+      </Menu>
+    </>
   );
 };
+
 export default ExcelDownloadButton;
-
-
-
-

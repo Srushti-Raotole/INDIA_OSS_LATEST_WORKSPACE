@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+
+import React, { useEffect, useState } from "react";
 import {
-  Drawer,
   List,
   ListItemButton,
   ListItemText,
   Collapse,
   Box,
   IconButton,
-  Divider,
   Badge,
+  Typography,
 } from "@mui/material";
 import {
   ExpandLess,
@@ -17,372 +17,210 @@ import {
 } from "@mui/icons-material";
 import { useLocation } from "react-router-dom";
 import useRouteNavigator from "../../utils/customNevigator/useRouterNevigator";
+import axiosClient from "@/api/axiosClient";
+import { FETCH_INVENTORY_CONC_CLIENTS, FETCH_PERFORMANCE_INFR_CLIENTS } from "@/api/apis";
 
-const drawerWidth = "18.5vw";
-
-type SubMenuItem = { title: string; path: string; newTab?: boolean };
-type ChildMenuItem = {
-  title: string;
-  path?: string;
-  newTab?: boolean;
-  children?: SubMenuItem[];
-};
+type SubMenuItem = { title: string; path: string };
 type MenuItem = {
   title: string;
-  icon?: React.ReactNode;
   path?: string;
-  children?: ChildMenuItem[];
+  children?: SubMenuItem[];
 };
 
 type SidebarMenuProps = {
   open: boolean;
   onClose: () => void;
-  /** Height of your fixed top navbar (AppBar). Typical: 64 desktop, 56 mobile */
-  appBarHeight?: string | number;
 };
 
 const INVENTORY_BASE = "/inventory";
-const toInventory = (p?: string) =>
-  p ? `${INVENTORY_BASE}/${p.replace(/^\/+/, "")}` : INVENTORY_BASE;
+const toInventory = (p?: string) => p ? `${INVENTORY_BASE}/${p.replace(/^\/+/, "")}` : INVENTORY_BASE;
 
-const menuItems: MenuItem[] = [
-  {
-    title: "MCP (Ciena)",
-    // icon: <BookOpen size={16} />,
+const BASE_MENU_ITEMS: MenuItem[] = [
+  { title: "All Physical Inventory", path: "all-physical-inventory" },
+  { title: "CONC", children: [] },
+  { title: "IFNR", children: [] },
+    {
+    title: "ADVA",
     children: [
-      {
-        title: "NE List Report",
-        path: "ciena/ne-list-report",
-      },
-      {
-        title: "Equipment Details Report",
-        path: "ciena/equipment-details-report",
-      },
-      {
-        title: "Channel Details Report",
-        path: "ciena/channel-details-report",
-      },
+      { title: "NE List Report (Microsoft)", path: "microsoft/adva/ne-list-report" },
     ],
   },
   {
-    title: "NFMT (NOKIA)",
-    // icon: <Server size={16} />,
+    title: "TLMR",
     children: [
-      {
-        title: "Device Details Report",
-        path: "nfmt/device-details-report",
-      },
-      {
-        title: "Equipment Details Report",
-        path: "nfmt/equipment-details-report",
-      },
+      { title: "NE List Report", path: "google/tlmr/ne-list-report" },
+      { title: "Circuit Inventory Report", path: "google/tlmr/circuit-inventory-report" },
+    ],
+  },
+  {
+    title: "EPNM",
+    children: [
+      { title: "NE List Report", path: "google/epnm/ne-list-report" },
+      { title: "Passive Inventory Report", path: "google/epnm/passive-inventory-report" },
+      { title: "Service Inventory Report", path: "google/epnm/service-inventory-report" },
+      { title: "Discovery Report", path: "google/epnm/discovery-report" },
+      { title: "Inventory Dashboard", path: "google/epnm/inventory-dashboard" },
+    ],
+  },
+  {
+    title: "MCP",
+    children: [
+      { title: "NE List Report", path: "ciena/ne-list-report" },
+      { title: "Equipment Details Report", path: "ciena/equipment-details-report" },
+      { title: "Channel Details Report", path: "ciena/channel-details-report" },
+      { title: "OTS Details Report", path: "ciena/ots-details-report" },
+      { title: "Feasibility Report", path: "ciena/feasibility-ui" },
+    ],
+  },
+  {
+    title: "NFMT",
+    children: [
+      { title: "Device Details Report", path: "nfmt/device-details-report" },
+      { title: "Equipment Details Report", path: "nfmt/equipment-details-report" },
     ],
   },
 ];
 
-export default function SidebarMenu({
-  open,
-  onClose,
-  appBarHeight = "5vh",
-}: SidebarMenuProps) {
+export default function SidebarMenu({ open, onClose }: SidebarMenuProps) {
   const { goTo } = useRouteNavigator();
   const location = useLocation();
+
   const [openMenu, setOpenMenu] = useState<string | null>(null);
-  const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
+  const [menuItems, setMenuItems] = useState<MenuItem[]>(BASE_MENU_ITEMS);
 
-  const isActivePath = (rel?: string) =>
-    rel ? location.pathname === toInventory(rel) : false;
+  const isActivePath = (rel?: string) => rel ? location.pathname === toInventory(rel) : false;
+  const handleToggle = (menu: string) => setOpenMenu((p) => (p === menu ? null : menu));
 
-  const handleToggle = (menu: string) => {
-    setOpenMenu((p) => (p === menu ? null : menu));
-    setOpenSubMenu(null);
-  };
+  useEffect(() => {
+    let updatedMenu = [...BASE_MENU_ITEMS];
 
-  const handleSubToggle = (key: string) =>
-    setOpenSubMenu((p) => (p === key ? null : key));
+    axiosClient.get(FETCH_PERFORMANCE_INFR_CLIENTS).then((res) => {
+      const clients: string[] = (res.data || []).map((c: any) => c.client || c.name);
+      const ifnrChildren: SubMenuItem[] = clients.map((client) => ({
+        title: `Circuit Inventory (${client})`,
+        path: `ifnr/${encodeURIComponent(client)}/circuit-inventory-report`,
+      }));
+      updatedMenu = updatedMenu.map((item) =>
+        item.title === "IFNR" ? { ...item, children: ifnrChildren } : item
+      );
+      setMenuItems([...updatedMenu]);
+    }).catch((err) => console.error("IFNR load failed:", err));
+
+    // -------- CONC Dynamic Loading --------
+    axiosClient.get(FETCH_INVENTORY_CONC_CLIENTS).then((res) => {
+      let raw: any[] = [];
+      if (Array.isArray(res.data)) raw = res.data;
+      else if (Array.isArray(res.data?.data)) raw = res.data.data;
+      else if (Array.isArray(res.data?.clients)) raw = res.data.clients;
+      else if (Array.isArray(res.data?.data?.clients)) raw = res.data.data.clients;
+
+      const clients: string[] = raw.map((c: any) => typeof c === "string" ? c : c.client || c.name);
+      const concChildren: SubMenuItem[] = clients.flatMap((client) => [
+        { title: `NE List (${client})`, path: `microsoft/conc/${encodeURIComponent(client)}/ne-list-report` },
+        { title: `Circuit Inventory (${client})`, path: `microsoft/conc/${encodeURIComponent(client)}/circuit-inventory-report` },
+      ]);
+
+      updatedMenu = updatedMenu.map((item) =>
+        item.title === "CONC" ? { ...item, children: concChildren } : item
+      );
+      setMenuItems([...updatedMenu]);
+    }).catch((err) => console.error("CONC load failed:", err));
+  }, []);
 
   return (
-    <Drawer
-      variant="persistent"
-      anchor="left"
-      open={open}
+    <Box
       sx={{
-        width: drawerWidth,
-        flexShrink: 0,
-        "& .MuiDrawer-paper": {
-          width: drawerWidth,
-          boxSizing: "border-box",
-          // Offset the drawer below your AppBar and adjust its height
-          top: appBarHeight,
-          height: `calc(100vh - ${appBarHeight}px)`,
-          position: "fixed",
-          // keep it under/behind the AppBar if needed
-          zIndex: (theme) => theme.zIndex.appBar - 1,
-
-          borderRight: "1px solid rgba(0,0,0,0.12)",
-          backgroundImage: `
-            radial-gradient(60% 40% at 30% 10%, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%),
-            linear-gradient(180deg, #f8f5f1 0%, #f3efe9 100%)
-          `,
-          backgroundColor: "#f7f3ee",
-          color: "#2b2b2b",
-          paddingTop: "0.6vh",
-          boxShadow:
-            "inset 0 0 0 1px rgba(0,0,0,0.06), inset 0 6px 12px rgba(0,0,0,0.04)",
-          fontFamily:
-            'Georgia, "Times New Roman", Times, "Iowan Old Style", "Palatino Linotype", serif',
-        },
+        width: open ? { xs: '250px', lg: '280px' } : 0,
+        minWidth: open ? { xs: '250px', lg: '280px' } : 0,
+        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+        overflowY: 'auto',
+        overflowX: 'hidden',
+        borderRight: open ? '1px solid #e2e8f0' : 'none',
+        backgroundColor: '#ffffff',
+        display: 'flex',
+        flexDirection: 'column',
+        flexShrink: 0
       }}
     >
-      {/* Header */}
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          px: "0.65vw",
-          py: "0.6vh",
-        }}
-      >
-        <Box
-          sx={{
-            fontVariant: "small-caps",
-            letterSpacing: "0.04vw",
-            fontWeight: 700,
-            fontSize: "2.6vh",
-            color: "#3a332c",
-          }}
-        >
-          Inventory
+      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", px: 2, py: 1.5, borderBottom: '1px solid #e2e8f0' }}>
+        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+          <Box sx={{ width: "4px", height: "24px", borderRadius: "2px", backgroundColor: "primary.main" }} />
+          <Box>
+            <Typography sx={{ fontSize: "0.85rem", fontWeight: 700, color: "#1e293b", lineHeight: 1.2, whiteSpace: "nowrap" }}>
+              Inventory
+            </Typography>
+            <Typography sx={{ fontSize: "0.68rem", color: "#64748b", fontWeight: 500, whiteSpace: "nowrap" }}>
+              Reports & Discovery
+            </Typography>
+          </Box>
         </Box>
-        <IconButton
-          onClick={onClose}
-          size="small"
-          sx={{
-            color: "#4b433b",
-            "&:hover": { color: "#2f2a25", background: "transparent" },
-          }}
+
+        <IconButton 
+          onClick={onClose} 
+          size="small" 
+          sx={{ bgcolor: "#f1f5f9", color: "#475569", width: 28, height: 28, borderRadius: 1.5, border: "1px solid #e2e8f0", "&:hover": { bgcolor: "#e2e8f0" } }}
         >
-          <MuiChevronLeft />
+          <MuiChevronLeft sx={{ fontSize: 18 }} />
         </IconButton>
       </Box>
 
-      <Divider
-        sx={{ my: "0.3vh", borderColor: "rgba(0,0,0,0.08)", mx: "0.5vw" }}
-      />
-
-      <List disablePadding>
+      <List disablePadding sx={{ px: 1, py: 1, flex: 1, overflowY: "auto" }}>
         {menuItems.map((item, idx) => {
           const isOpen = openMenu === item.title;
           const itemActive = isActivePath(item.path);
-          const key = `menu-${item.title}-${idx}`;
 
           return (
-            <Box key={key} sx={{ mx: "0.3vw" }}>
+            <Box key={`${item.title}-${idx}`} sx={{ mb: 0.5 }}>
               <ListItemButton
                 onClick={() => {
                   if (item.children) handleToggle(item.title);
                   else if (item.path) goTo(toInventory(item.path));
                 }}
                 sx={{
-                  mx: "0.4vw",
-                  mb: "0.15vh",
-                  borderRadius: "0.3vw",
-                  border: "1px solid rgba(0,0,0,0.06)",
-                  boxShadow: isOpen
-                    ? "inset 0 0 0 1px rgba(0,0,0,0.05)"
-                    : "none",
-                  background: itemActive
-                    ? "linear-gradient(180deg, #efe9e1 0%, #e9e2d8 100%)"
-                    : "transparent",
-                  "&:hover": {
-                    background:
-                      "linear-gradient(180deg, rgba(239,233,225,0.6) 0%, rgba(233,226,216,0.6) 100%)",
-                  },
-                  transition: "all .18s ease",
-                  py: "0.5vh",
-                  pl: "0.65vw",
-                  pr: "0.5vw",
-                  color: "#3b332c",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
+                  position: "relative", borderRadius: "6px", py: "6px", px: "12px",
+                  background: itemActive ? "rgba(25,118,210,0.08)" : "transparent",
+                  "&::before": itemActive ? {
+                    content: '""', position: "absolute", left: 0, top: "20%", height: "60%", width: "3px", borderRadius: "2px", backgroundColor: "primary.main"
+                  } : {},
+                  "&:hover": { backgroundColor: "rgba(25,118,210,0.04)" },
                 }}
               >
-                {/* LEFT Section */}
-                <Box
-                  sx={{ display: "flex", alignItems: "center", gap: "0.5vw" }}
-                >
-                  {/* <Box
-                    sx={{
-                      width: "1.6vw",
-                      height: "1.6vw",
-                      minWidth: "22px",
-                      minHeight: "22px",
-                      display: "grid",
-                      placeItems: "center",
-                      borderRadius: "999px",
-                      background: "rgba(0,0,0,0.06)",
-                      boxShadow: "inset 0 1px 0 rgba(255,255,255,0.5)",
-                      color: "#4a4139",
-                      fontSize: "0.9vw",
-                    }}
-                  >
-                    {item.icon ?? <BookOpen size={14} />}
-                  </Box> */}
-                  <ListItemText
-                    primary={item.title}
-                    primaryTypographyProps={{
-                      sx: {
-                        fontWeight: 600,
-                        fontSize: "2.4vh",
-                        letterSpacing: "0.015vw",
-                        color: "#3a332c",
-                      },
-                    }}
-                  />
-                </Box>
+                <ListItemText
+                  primary={item.title}
+                  primaryTypographyProps={{ sx: { fontWeight: 600, fontSize: "0.82rem", color: itemActive ? "primary.main" : "#334155" } }}
+                />
 
-                {/* RIGHT Section */}
                 {item.children && (
-                  <Box
-                    sx={{ display: "flex", alignItems: "center", gap: "0.5vw" }}
-                  >
+                  <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                     <Badge
-                      color="default"
-                      sx={{
-                        "& .MuiBadge-badge": {
-                          bgcolor: "#d8cfc4",
-                          color: "#3b332c",
-                          fontWeight: 600,
-                          fontSize: "1.5vh",
-                          minWidth: "1.3vw",
-                          height: "1.3vw",
-                          border: "1px solid rgba(0,0,0,0.08)",
-                        },
-                      }}
                       badgeContent={item.children.length}
+                      sx={{ "& .MuiBadge-badge": { bgcolor: "#e2e8f0", color: "#475569", fontWeight: 700, fontSize: "0.65rem", height: 16, minWidth: 16 } }}
                     />
-                    {isOpen ? (
-                      <ExpandLess
-                        sx={{ color: "#6a5f54", fontSize: "1.5vw" }}
-                      />
-                    ) : (
-                      <ExpandMore
-                        sx={{ color: "#6a5f54", fontSize: "1.5vw" }}
-                      />
-                    )}
+                    {isOpen ? <ExpandLess sx={{ fontSize: '1.2rem', color: '#64748b' }} /> : <ExpandMore sx={{ fontSize: '1.2rem', color: '#64748b' }} />}
                   </Box>
                 )}
               </ListItemButton>
 
               {item.children && (
-                <Collapse
-                  in={isOpen}
-                  timeout={180}
-                  unmountOnExit
-                  sx={{ ml: "0.8vw", mr: "0.65vw" }}
-                >
-                  <List component="div" disablePadding sx={{ mb: "0.3vh" }}>
+                <Collapse in={isOpen} timeout={180} unmountOnExit>
+                  <List disablePadding sx={{ pl: 1.5, mt: 0.5 }}>
                     {item.children.map((child, cIdx) => {
-                      const subKey = `${item.title}-${child.title}-${cIdx}`;
-                      const isSubOpen = openSubMenu === subKey;
-                      const childActive = isActivePath(child.path);
-
+                      const active = isActivePath(child.path);
                       return (
-                        <Box key={subKey}>
-                          <ListItemButton
-                            sx={{
-                              borderRadius: "0.3vw",
-                              my: "0.5vh",
-                              pl: "1.5vw",
-                              pr: "0.5vw",
-                              py: "0.8vh",
-                              border: "1px dashed rgba(0,0,0,0.08)",
-                              bgcolor: childActive
-                                ? "rgba(0,0,0,0.04)"
-                                : isSubOpen
-                                ? "rgba(0,0,0,0.03)"
-                                : "transparent",
-                              "&:hover": { bgcolor: "rgba(0,0,0,0.04)" },
-                            }}
-                            onClick={() => {
-                              if (child.children) handleSubToggle(subKey);
-                              else if (child.path) goTo(toInventory(child.path));
-                            }}
-                          >
-                            <ListItemText
-                              primary={child.title}
-                              primaryTypographyProps={{
-                                sx: {
-                                  fontSize: "2.3vh",
-                                  color: "#3e3831",
-                                  fontWeight: 500,
-                                },
-                              }}
-                            />
-                            {child.children &&
-                              (isSubOpen ? (
-                                <ExpandLess
-                                  fontSize="small"
-                                  sx={{ color: "#6a5f54", fontSize: "2.3vw" }}
-                                />
-                              ) : (
-                                <ExpandMore
-                                  fontSize="small"
-                                  sx={{ color: "#6a5f54", fontSize: "2.3vw" }}
-                                />
-                              ))}
-                          </ListItemButton>
-
-                          {child.children && (
-                            <Collapse
-                              in={isSubOpen}
-                              timeout={160}
-                              unmountOnExit
-                              sx={{ ml: "0.5vw" }}
-                            >
-                              <List component="div" disablePadding>
-                                {child.children.map((subChild, sIdx) => {
-                                  const full = toInventory(subChild.path);
-                                  const active = location.pathname === full;
-                                  return (
-                                    <ListItemButton
-                                      key={`${subKey}-${sIdx}`}
-                                      sx={{
-                                        borderRadius: "0.3vw",
-                                        my: "0.5vh",
-                                        pl: "1.8vw",
-                                        pr: "0.5vw",
-                                        py: "0.8vh",
-                                        "&:hover": {
-                                          backgroundColor: "rgba(0,0,0,0.04)",
-                                        },
-                                        background: active
-                                          ? "linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.02))"
-                                          : "transparent",
-                                      }}
-                                      onClick={() => goTo(full)}
-                                    >
-                                      <ListItemText
-                                        primary={subChild.title}
-                                        primaryTypographyProps={{
-                                          sx: {
-                                            fontSize: "1.5vh",
-                                            color: active
-                                              ? "#382f26"
-                                              : "#4b433b",
-                                            fontWeight: 550,
-                                          },
-                                        }}
-                                      />
-                                    </ListItemButton>
-                                  );
-                                })}
-                              </List>
-                            </Collapse>
-                          )}
-                        </Box>
+                        <ListItemButton
+                          key={`${child.title}-${cIdx}`}
+                          sx={{
+                            py: "5px", pl: "16px", borderRadius: "4px", mb: 0.2,
+                            background: active ? "rgba(25,118,210,0.04)" : "transparent",
+                            "&:hover": { backgroundColor: "#f1f5f9" },
+                          }}
+                          onClick={() => child.path && goTo(toInventory(child.path))}
+                        >
+                          <ListItemText
+                            primary={child.title}
+                            primaryTypographyProps={{ sx: { fontSize: "0.76rem", fontWeight: active ? 700 : 500, color: active ? "primary.main" : "#475569" } }}
+                          />
+                        </ListItemButton>
                       );
                     })}
                   </List>
@@ -392,19 +230,6 @@ export default function SidebarMenu({
           );
         })}
       </List>
-
-      <Box
-        sx={{
-          mt: "auto",
-          px: "1vw",
-          py: "0.8vh",
-          color: "#6b6157",
-          fontSize: "0.85vh",
-          borderTop: "1px solid rgba(0,0,0,0.08)",
-        }}
-      >
-        {""}
-      </Box>
-    </Drawer>
+    </Box>
   );
 }

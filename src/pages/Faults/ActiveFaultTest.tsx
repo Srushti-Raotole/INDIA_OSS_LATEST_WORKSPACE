@@ -1,63 +1,30 @@
 import { useState, useEffect, useMemo } from 'react';
-import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import CssBaseline from '@mui/material/CssBaseline';
 import IconButton from '@mui/material/IconButton';
-import Divider from '@mui/material/Divider';
-import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import { useTheme } from '@mui/material/styles';
 import { DynamicTableRow } from '../../store/types';
-import BarChartTemplate from '../../components/faults/active/faults/BarChartTemplate';
-import GraphTemplateSeverityTrend from '../../components/faults/active/faults/SeverityCountTrendGraph';
-import axiosClient, { baseURL_WS } from '../../utils/axiosData/axioxClient';
-import { FETCH_ACTIVE_FAULTS_TABLE_DATA } from '../../utils/axiosData/apis';
+import BarChartTemplate from '../../components/faults/active/faults/Graphs/BarChartTemplate';
+import GraphTemplateSeverityTrend from '../../components/faults/active/faults/Graphs/SeverityCountTrendGraph';
+import axiosClient from "@/api/axiosClient";
+import { FETCH_ACTIVE_FAULTS_TABLE_DATA } from "@/api/apis";
 import { Client } from '@stomp/stompjs';
 import SockJS from 'sockjs-client';
-import TrapDetailsDialog from '../../components/faults/active/faults/TrapDetailsDialog';
-import { Grid, Typography } from '@mui/material';
+import TrapDetailsDialog from '../../components/faults/active/faults/Dialog/TrapDetailsDialog';
 import AlarmSummaryCardsInsideSidebar from '../../components/faults/active/faults/AlarmSummaryCardSidebar';
 import ActiveFaultsTableForSidebar from '../../components/faults/active/faults/ActiveFaultTableForSidebar';
-import LoadingBox from '../../components/common/LoadingBox';
+import { logActivity } from '../../utils/activityLogger';
+import FullPageLoader from '../../components/common/FullPageLoader';
+import { Grid, Typography } from '@mui/material';
 
-/* ===== Layout constants ===== */
-const drawerWidth = '20vw';
-const TOP_OFFSET = '5vh';
-
-/* ===== Local storage key (cache last WS/API data) ===== */
+/* ===== Local storage key ===== */
 const STORAGE_KEY = 'active_faults_last_payload_v1';
-
-/* ===== Styled pieces ===== */
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
-  open?: boolean;
-}>(({ theme }) => ({
-  boxSizing: 'border-box',
-  minHeight: `calc(100vh - ${TOP_OFFSET})`,
-  paddingTop: `calc(${TOP_OFFSET} + ${theme.spacing(1)})`,
-  marginLeft: 0,
-  width: '100%',
-  overflowX: 'hidden',
-  transition: theme.transitions.create(['margin-left', 'width'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.enteringScreen,
-  }),
-}));
-
-const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'flex-end',
-  padding: theme.spacing(1),
-}));
 
 /* ===== utils & mapping ===== */
 const norm = (v?: string | null) => (v ?? '').toString().trim();
 const up = (v?: string | null) => norm(v).toUpperCase();
 
 const ALARM_SEVERITIES = ['Critical', 'Major', 'Minor'] as const;
-const PRESET_SOURCES = ['MCP', 'NFMT'] as const;
+const PRESET_SOURCES = ['CONC', 'ADVA', 'IFNR', 'TLMR', 'EPNM', 'MCP', 'NFMT'] as const;
 
 function mapSeverity(s?: string) {
   const u = (s ?? '').toUpperCase();
@@ -87,89 +54,53 @@ function shouldHighlightRow(row: DynamicTableRow) {
 }
 
 const dtoToRow = (dto: any): DynamicTableRow => ({
-  Adapter: dto.adapaterName ?? dto.clientType ?? '',
+  Adapter: dto.adapterName ?? '',
   Severity: mapSeverity(dto.severity),
-  Alarm: dto.traptype ?? '',
+  Alarm: dto.trapType ?? '',
   Client: dto.clientType ?? '',
   Technology: dto.vendor ?? '',
-  'Device Name': dto.nodename ?? '',
-  Source: dto.senderip ?? '',
-  'Port Name': dto.ifdesc ?? '',
-  'No.Services_Affected': dto.numberOfServiceAffecting ?? '',
-  'Device Type': dto.nodetype ?? '',
-  'NMS Received Time': dto.rec_time ?? '',
+  'Device Name': dto.nodeName ?? '',
+  Source: dto.senderIp ?? '',
+  'Trap Source': dto.trpSource ?? '',
+  'Port Name': dto.ifDesc ?? '',
+  Tag: dto.tag ?? '',
+  'Device Type': dto.nodeType ?? '',
   Description: dto.desc ?? '',
-  'Ack Status': dto.ack_stat ?? '',
-  'Ack Time': dto.ack_time ?? '',
-  'Ack Msg': dto.ack_msg ?? '',
-  'Ack User': dto.ack_user ?? '',
-  'Clear Msg': dto.clear_msg ?? '',
-  'Clear User': dto.clear_user ?? '',
+  'No. of Service Affected': dto.numberOfServiceAffecting ?? dto.noOfServiceAffected ?? '',
+  'NMS Received Time': dto.recTime ?? '',
+  'Update Time': dto.updateTime ?? '',
+  'OSS Insertion Time': dto.insertionTime ?? '',
+  'Clear Time': dto.clearTime ?? '',
+  'Ack Status': dto.ackStat ?? '',
+  'Ack Time': dto.ackTime ?? '',
+  'Ack Msg': dto.ackMsg ?? '',
+  'Ack User': dto.ackUser ?? '',
+  'Ticket Status': dto.ticketStatus ?? '',
   'Object Ref': dto.ref ?? '',
-  'Trap Source': dto.trpsource ?? '',
-  'Update Time': dto.update_time ?? '',
-  'OSS Insertion Time': dto.insertion_time ?? '',
-  'Clear Time': dto.clear_time ?? 's',
-  'Internal TicketId': dto.trapid ?? '',
-  'Alarm Id': dto.alarmid ?? '',
+  'Alarm Id': dto.alarmId ?? '',
+  'Internal TicketId': dto.trapId ?? '',
   'External TicketId': dto.ticket ?? '',
-  __trapid: dto.trapid ?? '',
-  __adapaterName: dto.adapaterName ?? '',
+  Circle: dto.circle ?? '',
+  City: dto.city ?? '',
+  'ERP Site ID': dto.erpSiteId ?? '',
+  __adapterName: dto.adapterName ?? '',
   __vendor: dto.vendor ?? '',
-  __rec_time: dto.rec_time ?? '',
+  __rec_time: dto.recTime ?? '',
 });
 
 const defaultVisibleColumns = [
-  'Adapter',
-  'Severity',
-  'Alarm',
-  'Technology',
-  'Device Name',
-  'Source',
-  'Port Name',
-  'No.Services_Affected',
-  'Description',
-  'Ack Time',
-  'Ack Msg',
-  'Ack User',
-  'Clear Msg',
-  'Clear User',
-  'NMS Received Time',
-  'Clear Time',
-  'OSS Insertion Time',
-  'Internal TicketId',
+  'Adapter', 'Severity', 'Alarm', 'Technology', 'Client', 'Device Name', 'Circle', 'City', 'ERP Site ID',
+  'Source', 'Port Name', 'Tag', 'External TicketId','Ticket Status', 'Description', 'Ack Time', 'Ack Msg', 'Ack User',
+  'Clear Msg', 'Clear User', 'NMS Received Time', 'Clear Time', 'OSS Insertion Time', 'Internal TicketId',
 ];
 
 const columnOrder = [
-  'Adapter',
-  'Severity',
-  'Alarm',
-  'Client',
-  'Technology',
-  'Device Name',
-  'Source',
-  'Device Type',
-  'Port Name',
-  'No.Services_Affected',
-  'Description',
-  'Ack Status',
-  'Ack Time',
-  'Ack Msg',
-  'Ack User',
-  'Clear Msg',
-  'Clear User',
-  'Object Ref',
-  'Trap Source',
-  'NMS Received Time',
-  'Update Time',
-  'Clear Time',
-  'OSS Insertion Time',
-  'Alarm Id',
-  'Internal TicketId',
-  'External TicketId',
+  'Adapter', 'Severity', 'Alarm', 'Client', 'Technology', 'Device Name', 'Port Name', 'Tag', 'Source',
+  'Circle', 'City', 'ERP Site ID', 'Device Type', 'Description', 'Ack Status', 'Ack Time', 'Ack Msg',
+  'Ack User', 'Clear Msg', 'Clear User', 'Object Ref', 'Trap Source', 'NMS Received Time', 'Update Time',
+  'Clear Time', 'OSS Insertion Time', 'Alarm Id', 'Internal TicketId', 'External TicketId','Ticket Status', 'No. of Service Affected',
 ];
 
-/* ===== chart builders ===== */
 function groupByAdapterAndSeverity(rows: DynamicTableRow[]) {
   const result: Record<string, Record<string, number>> = {};
   for (const src of PRESET_SOURCES) {
@@ -193,9 +124,7 @@ function groupByAdapterAndSeverity(rows: DynamicTableRow[]) {
 function buildBarDataset(rows: DynamicTableRow[]) {
   const grouped = groupByAdapterAndSeverity(rows);
   const header = ['Adapter', ...ALARM_SEVERITIES];
-  const Adapters = [...PRESET_SOURCES,...Object.keys(grouped).filter((a) =>
-     !PRESET_SOURCES.includes(a as any)),
-  ];
+  const Adapters = [...PRESET_SOURCES, ...Object.keys(grouped).filter((a) => !PRESET_SOURCES.includes(a as any))];
   const body = Adapters.map((Adapter) => {
     const sevMap = grouped[Adapter] || {};
     return [Adapter, ...ALARM_SEVERITIES.map((s) => sevMap[s] ?? 0)];
@@ -221,16 +150,15 @@ function buildSeverityTrend(
 
   const first = buckets[0].getTime();
   const last = buckets[buckets.length - 1].getTime();
-
   const countMap: Record<number, Record<string, number>> = {};
+
   for (const b of buckets) {
     countMap[b.getTime()] = {};
     for (const s of severities) countMap[b.getTime()][s] = 0;
   }
 
   for (const r of rows) {
-    const tsRaw =
-      (r['Received Time'] as string) || (r['NMS Received Time'] as string);
+    const tsRaw = r['NMS Received Time'] as string;
     if (!tsRaw) continue;
     const ts = new Date(tsRaw);
     if (isNaN(ts.getTime())) continue;
@@ -246,332 +174,224 @@ function buildSeverityTrend(
     }
   }
 
-  const series: Series[] = severities.map((s) => ({
+  return severities.map((s) => ({
     name: s,
-    data: buckets.map((b) => ({
-      time: b,
-      value: countMap[b.getTime()][s] ?? 0,
-    })),
+    data: buckets.map((b) => ({ time: b, value: countMap[b.getTime()][s] ?? 0 })),
   }));
-
-  return series;
 }
 
-/* ===== Helper: load cached data synchronously for initial render ===== */
+function safeSetItem(key: string, value: string) {
+  try {
+    if (value.length > 4 * 1024 * 1024) return;
+    localStorage.setItem(key, value);
+  } catch (e) {
+    if (e instanceof DOMException && e.name === 'QuotaExceededError') {
+      try { localStorage.removeItem(key); } catch { }
+    }
+  }
+}
+
 function loadInitialRowsFromCache(): DynamicTableRow[] {
   if (typeof window === 'undefined') return [];
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
     if (!raw) return [];
     const parsed = JSON.parse(raw);
-    if (Array.isArray(parsed)) {
-      console.log('Initial rows from cache:', parsed.length);
-      return parsed;
-    }
-    return [];
-  } catch (e) {
-    console.error('Failed to load cached active faults (initial)', e);
-    return [];
-  }
+    return Array.isArray(parsed) ? parsed : [];
+  } catch { return []; }
 }
 
-/* ===== Component ===== */
 export default function ActiveFaultTest() {
-  const theme = useTheme();
   const [open, setOpen] = useState(false);
+  const [openTrapDetails, setOpenTrapDetails] = useState(false); //  FIXED: Added missing state variable
 
-  const [openModel, setOpenModel] = useState(false);
   const [trapSelected, setTrapSelected] = useState<string[]>([]);
-
-  // Initial data directly from cache (if any)
-  const [tableData, setTableData] = useState<DynamicTableRow[]>(() =>
-    loadInitialRowsFromCache()
-  );
-  const [finalFilteredData, setFinalFilteredData] = useState<DynamicTableRow[]>(
-    () => loadInitialRowsFromCache()
-  );
-
-  const [alarmSeveritySelected, setAlarmSeveritySelected] =
-    useState<string>('ALL');
-  const [alarmSourceSelected, setAlarmSourceSelected] =
-    useState<string>('ALL');
-  const [popUpDataRow, setPopUpDataRow] =
-    useState<DynamicTableRow | null>(null);
+  const [tableData, setTableData] = useState<DynamicTableRow[]>(() => loadInitialRowsFromCache());
+  const [finalFilteredData, setFinalFilteredData] = useState<DynamicTableRow[]>(() => loadInitialRowsFromCache());
+  const [alarmSeveritySelected, setAlarmSeveritySelected] = useState<string>('ALL');
+  const [alarmSourceSelected, setAlarmSourceSelected] = useState<string>('ALL');
+  const [popUpDataRow, setPopUpDataRow] = useState<DynamicTableRow | null>(null);
   const [viewGraph, setViewGraph] = useState<boolean>(false);
-
-  // NEW: loading state
   const [isLoading, setIsLoading] = useState<boolean>(false);
-
-  const handleToggle = () => setOpen((v) => !v);
-  const handleDrawerClose = () => setOpen(false);
 
   const TABLE_ID = 'active-faults-table';
 
-  /* ===== Helper: persist rows to state + localStorage ===== */
   const persistTableData = (rows: DynamicTableRow[]) => {
     setTableData(rows);
     setFinalFilteredData(rows);
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(rows));
-    } catch (e) {
-      console.error('Failed to cache active faults in localStorage', e);
-    }
+    safeSetItem(STORAGE_KEY, JSON.stringify(rows));
   };
 
-  // API load
   const fetchFaultsData = async () => {
     try {
-      setIsLoading(true); // start spinner
-      const response = await axiosClient.get(FETCH_ACTIVE_FAULTS_TABLE_DATA);
+      setIsLoading(true);
+      const response = await axiosClient.get(FETCH_ACTIVE_FAULTS_TABLE_DATA, {});
       if (response.status === 200) {
-        const rowsDTO = (response.data ?? []) as any[];
-        const rows = rowsDTO.map(dtoToRow);
-        persistTableData(rows); // update + recache
+        const rows = (response.data ?? []).map(dtoToRow);
+        persistTableData(rows);
       } else {
-        // optional: clear data on non-200
-        setTableData([]);
-        setFinalFilteredData([]);
+        setTableData([]); setFinalFilteredData([]);
       }
-    } catch (e) {
-      console.error(e);
-      setTableData([]);
-      setFinalFilteredData([]);
+    } catch {
+      setTableData([]); setFinalFilteredData([]);
     } finally {
-      setIsLoading(false); // stop spinner
+      setIsLoading(false);
     }
   };
 
-  // WebSocket live updates
+  useEffect(() => {
+    logActivity({ activity: "Active Fault page opened", actionName: "ACTIVE_FAULT_PAGE", module: "FAULTS" });
+    fetchFaultsData();
+  }, []);
+
   useEffect(() => {
     let isActive = true;
-    const socket = new SockJS(`${baseURL_WS}/ws`);
+    const socket = new SockJS(`${window.location.origin}/indiabackend/ws`);
     const client = new Client({
       webSocketFactory: () => socket as any,
       reconnectDelay: 5000,
       onConnect: () => {
         if (!isActive) return;
         client.subscribe(`/topic/active-traps`, (message) => {
-          console.log('WS MESSAGE RECEIVED:');
-          console.log('RAW MESSAGE:', message);
-          if (!isActive) return;
-          if (message.body) {
-            const payloadDTO = JSON.parse(message.body) as any[];
-            console.log('Parsed DTO count:', payloadDTO.length);
-            const payload = payloadDTO.map(dtoToRow);
-            console.log(
-              'Converted rows (DynamicTableRow count):',
-              payload.length
-            );
-            persistTableData(payload);
-          }
+          if (!isActive || !message.body) return;
+          const payload = JSON.parse(message.body).map(dtoToRow);
+          persistTableData(payload);
         });
       },
     });
     client.activate();
-    return () => {
-      isActive = false;
-      client.deactivate();
-    };
+    return () => { isActive = false; client.deactivate(); };
   }, []);
 
-  // Initial API call
-  useEffect(() => {
-    fetchFaultsData();
-  }, []);
-
-  // filters
   useEffect(() => {
     let filtered = [...tableData];
     if (alarmSeveritySelected !== 'ALL') {
-      filtered = filtered.filter(
-        (row) =>
-          normalizeSeverity(norm(row['Severity'] as string)) ===
-          alarmSeveritySelected
-      );
+      filtered = filtered.filter((row) => normalizeSeverity(norm(row['Severity'] as string)) === alarmSeveritySelected);
     }
     if (alarmSourceSelected !== 'ALL') {
-      filtered = filtered.filter(
-        (row) => up(row['Adapter'] as string) === alarmSourceSelected
-      );
+      filtered = filtered.filter((row) => up(row['Adapter'] as string) === alarmSourceSelected);
     }
     if (trapSelected.length > 0) {
-      filtered = filtered.filter((row) =>
-        trapSelected.includes(norm(row['Alarm'] as string))
-      );
+      filtered = filtered.filter((row) => trapSelected.includes(norm(row['Alarm'] as string)));
     }
     setFinalFilteredData(filtered);
   }, [tableData, alarmSeveritySelected, alarmSourceSelected, trapSelected]);
 
-  // chart-ready data
-  const barData = useMemo(
-    () => buildBarDataset(finalFilteredData),
-    [finalFilteredData]
-  );
-  const severitySeriesData = useMemo(
-    () =>
-      buildSeverityTrend(finalFilteredData, 10, [
-        'Critical',
-        'Major',
-        'Minor',
-      ]),
-    [finalFilteredData]
-  );
-
+  const barData = useMemo(() => buildBarDataset(finalFilteredData), [finalFilteredData]);
   const hasRows = finalFilteredData.length > 0;
 
   return (
-    <div
-      style={{
-        backgroundColor: '#fff',
-        minHeight: '100vh',
-        maxWidth: '100vw',
-        width: '100vw',
+    <Box
+      sx={{
+        display: 'flex',
+        height: '100%',
+        width: '100%',
         overflow: 'hidden',
+        backgroundColor: '#f1f5f9'
       }}
     >
-      <Box sx={{ display: 'flex', width: '100%' }}>
-        <CssBaseline />
-
-        {/* Floating toggle button */}
-        <IconButton
-          onClick={handleToggle}
-          aria-label="toggle menu"
-          sx={{
-            position: 'fixed',
-            top: `calc(${TOP_OFFSET} + 1.7vh)`,
-            left: 12,
-            zIndex: (t) => t.zIndex.drawer + 2,
-            bgcolor: 'white',
-            border: '1px solid rgba(0,0,0,0.12)',
-            boxShadow: 1,
-            '&:hover': { bgcolor: 'white' },
-          }}
-          size="small"
-        >
-          <MenuIcon />
-        </IconButton>
-
-        {/* Persistent Drawer (offset below top nav) */}
-        <Drawer
-          variant="persistent"
-          anchor="left"
-          open={open}
-          sx={{
-            width: open ? drawerWidth : 0,
-            flexShrink: 0,
-            '& .MuiDrawer-paper': {
-              width: drawerWidth,
-              boxSizing: 'border-box',
-              position: 'fixed',
-              top: TOP_OFFSET,
-              height: `calc(100vh - ${TOP_OFFSET})`,
-            },
-          }}
-        >
-          <DrawerHeader>
-            <IconButton onClick={handleDrawerClose}>
-              {theme.direction === 'ltr' ? (
-                <ChevronLeftIcon />
-              ) : (
-                <ChevronRightIcon />
-              )}
-            </IconButton>
-          </DrawerHeader>
-          <Divider />
-          <Grid container spacing={1}>
-            <AlarmSummaryCardsInsideSidebar
-              tableData={tableData}
-              alarmSeveritySelected={alarmSeveritySelected}
-              setAlarmSeveritySelected={setAlarmSeveritySelected}
-              alarmSourceSelected={alarmSourceSelected}
-              setAlarmSourceSelected={setAlarmSourceSelected}
-            />
-          </Grid>
-          <Divider />
-        </Drawer>
-
-        {/* Main content; always fits in 100vw */}
-        <Main open={open} sx={{ p: '1vh' }}>
-          <Grid container spacing={0} sx={{ width: '100%' }}>
-            {/* <MiniCardsTop tableData={tableData}/> */}
-          </Grid>
-
-          {viewGraph && (
-            <Grid
-              container
-              sx={{ height: '35vh', my: 0.5 }}
-              spacing={1}
-              alignItems="stretch"
-            >
-              <Grid size={{ xs: 12, md: 6 }} sx={{ p: 0, height: '100%' }}>
-                <BarChartTemplate
-                  title="Active alarms by Adapter"
-                  data={barData}
-                  isSidebarOpen={open}
-                />
-              </Grid>
-              <Grid size={{ xs: 12, md: 6 }} sx={{ p: 0, height: '100%' }}>
-                <GraphTemplateSeverityTrend
-                />
-              </Grid>
-            </Grid>
-          )}
-
-          {/* Table area: spinner -> table -> no data */}
-          <Grid
-            size={{ xs: 12, md: 6 }}
-            sx={{ borderRadius: '1vh', mt: '0.5vh' }}
-          >
-            {isLoading && !hasRows ? (
-              // Initial / full reload loading state
-              <LoadingBox isLoading />
-            ) : hasRows ? (
-              // Data available ⇒ show actual table
-              <ActiveFaultsTableForSidebar
-                columnOrder={columnOrder}
-                defaultVisibleColumns={defaultVisibleColumns}
-                dataObjects={finalFilteredData}
-                pageSize={100}
-                isActiveTab={true}
-                viewGraph={viewGraph}
-                setViewGraph={setViewGraph}
-                tableId={TABLE_ID}
-                highlightPredicate={shouldHighlightRow}
-                onRowClick={(row) => {
-                  setPopUpDataRow(row);
-                  setOpenModel(true);
-                }}
-                drawerOpen={open}
-                drawerWidthCss={drawerWidth}
-              />
-            ) : (
-              // API done, but no rows
-              <Box
-                sx={{
-                  height: '70vh',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: '1vh',
-                  border: '1px solid rgba(0,0,0,0.12)',
-                  backgroundColor: '#fafafa',
-                }}
-              >
-                <Typography variant="subtitle1" sx={{ color: '#666' }}>
-                  No active alarms found.
-                </Typography>
-              </Box>
-            )}
-          </Grid>
-
-          <TrapDetailsDialog
-            open={!!openModel}
-            onClose={() => setOpenModel(false)}
-            popUpDataRow={popUpDataRow}
+      {/* ================= IN-PAGE SIDEBAR (FLEX COLLAPSE INSTEAD OF FIXED DRAWER) ================= */}
+      <Box
+        sx={{
+          width: open ? { xs: '250px', lg: '300px' } : 0,
+          minWidth: open ? { xs: '250px', lg: '300px' } : 0,
+          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          overflowY: 'auto',
+          overflowX: 'hidden',
+          borderRight: open ? '1px solid #e2e8f0' : 'none',
+          backgroundColor: '#ffffff',
+          display: 'flex',
+          flexDirection: 'column',
+          flexShrink: 0
+        }}
+      >
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', p: 1.5, borderBottom: '1px solid #e2e8f0' }}>
+          <Typography sx={{ fontSize: '0.75rem', fontWeight: 800, color: '#1e293b', letterSpacing: '0.05em' }}>
+            Active Alarms
+          </Typography>
+          <IconButton onClick={() => setOpen(false)} size="small" sx={{ bgcolor: '#f1f5f9', '&:hover': { bgcolor: '#e2e8f0' } }}>
+            <ChevronLeftIcon sx={{ fontSize: 18, color: '#475569' }} />
+          </IconButton>
+        </Box>
+        <Box sx={{ p: 1 }}>
+          <AlarmSummaryCardsInsideSidebar
+            tableData={tableData}
+            alarmSeveritySelected={alarmSeveritySelected}
+            setAlarmSeveritySelected={setAlarmSeveritySelected}
+            alarmSourceSelected={alarmSourceSelected}
+            setAlarmSourceSelected={setAlarmSourceSelected}
           />
-        </Main>
+        </Box>
       </Box>
-    </div>
+
+      {/* ================= MAIN CONTENT ENVELOPE ================= */}
+      {/* ================= MAIN CONTENT ENVELOPE ================= */}
+      <Box
+        sx={{
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          overflow: 'hidden',
+          pt: 1.5, 
+          px: 1.5, 
+          pb: 0,  
+          gap: 1.5,
+          minWidth: 0
+        }}
+      >
+        {/* Graph Section */}
+        {/* Graph Section */}
+        {viewGraph && (
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', md: 'row' }, // Stack on mobile, side-by-side on desktop
+              gap: 1.5,
+              height: '35%',
+              minHeight: 280,
+              flexShrink: 0, // Prevents the table from crushing the graphs
+              width: '100%'
+            }}
+          >
+            <Box sx={{ flex: 1, minWidth: 0, height: '100%', bgcolor: '#ffffff', borderRadius: 2, border: '1px solid #e2e8f0', p: 1, overflow: 'hidden' }}>
+              <BarChartTemplate title="Active alarms by Adapter" data={barData} isSidebarOpen={open} />
+            </Box>
+
+            <Box sx={{ flex: 1, minWidth: 0, height: '100%', bgcolor: '#ffffff', borderRadius: 2, border: '1px solid #e2e8f0', p: 1, overflow: 'hidden' }}>
+              <GraphTemplateSeverityTrend />
+            </Box>
+          </Box>
+        )}
+
+        {/* Table Section */}
+        <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+          {isLoading && !hasRows ? (
+            <FullPageLoader message="Loading Active Fault Data" />
+          ) : hasRows ? (
+            <ActiveFaultsTableForSidebar
+              columnOrder={columnOrder}
+              defaultVisibleColumns={defaultVisibleColumns}
+              dataObjects={finalFilteredData}
+              pageSize={100}
+              isActiveTab={true}
+              viewGraph={viewGraph}
+              setViewGraph={setViewGraph}
+              tableId={TABLE_ID}
+              highlightPredicate={shouldHighlightRow}
+              onRowClick={(row) => { setPopUpDataRow(row as DynamicTableRow); setOpenTrapDetails(true); }}
+              drawerOpen={open}
+              onDrawerToggle={() => setOpen(true)}
+            />
+          ) : (
+            <Box sx={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 2, bgcolor: '#ffffff', border: '1px solid #e2e8f0' }}>
+              <Typography sx={{ fontSize: '0.85rem', fontWeight: 600, color: '#64748b' }}>No active alarms found</Typography>
+            </Box>
+          )}
+        </Box>
+      </Box>
+
+      {/* Popups */}
+      <TrapDetailsDialog open={!!openTrapDetails} onClose={() => setOpenTrapDetails(false)} popUpDataRow={popUpDataRow} />
+    </Box>
   );
 }
-

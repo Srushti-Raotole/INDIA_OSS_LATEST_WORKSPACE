@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { DynamicTableRow } from '../../../../store/types';
 
 const StatusCard = styled(Box)(() => ({
-  backgroundColor: '#7e7d7dff',
+  backgroundColor: '#455a64',
   borderRadius: '1.5vh',
   padding: '1vh 0.6vw',
   minWidth: '9vw',
@@ -100,39 +100,22 @@ const HeaderRow = ({
     }}
   >
     {/* Title center */}
-    <Typography
-      variant="body2"
-      sx={{
-        color: '#ffffff',
-        fontSize: '1.6vh',
-        fontWeight: 600,
-        width: '100%',
-        textAlign: 'center',
-        lineHeight: 1.2,
-        userSelect: 'none',
-      }}
-    >
-      {title}
-    </Typography>
-
-    {/* Count right end (absolute) - CLICKABLE ONLY IF total > 0 */}
     <Box
       onClick={total > 0 ? onTotalClick : undefined}
       sx={{
-        position: 'absolute',
-        right: 0,
-        px: '0.5vw',
-        py: '0.2vh',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '0.6vw',
+        px: "0.4vw",
+        py: "0.1vh",
         borderRadius: '1vh',
         cursor: total > 0 ? 'pointer' : 'not-allowed',
         pointerEvents: total > 0 ? 'auto' : 'none',
         opacity: total > 0 ? 1 : 0.45,
         userSelect: 'none',
-        fontSize: '1.8vh',
-        fontWeight: 700,
-        color: '#ffffff',
 
-        backgroundColor: 'rgba(255,255,255,0.15)', // default visible button feel
+        backgroundColor: 'rgba(255,255,255,0.15)',
         transition: 'all 0.15s ease',
 
         '&:hover': total > 0
@@ -141,14 +124,44 @@ const HeaderRow = ({
 
         '&:active': total > 0
           ? {
-              backgroundColor: 'rgba(255,255,255,0.35)',
-              transform: 'scale(0.94)',
-            }
+            backgroundColor: 'rgba(255,255,255,0.35)',
+            transform: 'scale(0.94)',
+          }
           : undefined,
       }}
     >
-      {total}
+      {/* Title */}
+      <Typography
+        variant="body2"
+        sx={{
+          color: '#ffffff',
+          fontSize: '1.6vh',
+          fontWeight: 600,
+          lineHeight: 1.2,
+          whiteSpace: 'nowrap',
+        }}
+      >
+        {title}
+      </Typography>
+
+      {/* Count */}
+      <Box
+        sx={{
+          px: "0.1vw",
+          py: "0.01vh",
+          borderRadius: '1vh',
+          fontSize: '1.8vh',
+          fontWeight: 700,
+          color: '#ffffff',
+          // backgroundColor: 'rgba(255,255,255,0.25)',
+          minWidth: '2.5ch',
+          textAlign: 'center',
+        }}
+      >
+        {total}
+      </Box>
     </Box>
+
   </Box>
 );
 
@@ -159,7 +172,8 @@ function AlarmSummaryCardsInsideSidebarTicketing({
   alarmSourceSelected,
   setAlarmSourceSelected,
 }: AlarmSummaryCardsProps) {
-  const PRESET_SOURCES = ['MCP', 'NFMT'] as const;
+  // const PRESET_SOURCES = ['MCP', 'NFMT'] as const;
+  const PRESET_SOURCES = ['CONC', 'ADVA', 'IFNR', 'TLMR', 'EPNM', 'MCP', 'NFMT'] as const;
   const TICKET_STATES: TicketState[] = ['Open', 'Resolved', 'Creation failed'];
 
   // overall total count
@@ -179,7 +193,7 @@ function AlarmSummaryCardsInsideSidebarTicketing({
       },
       {} as Record<string, Record<TicketState, number>>,
     );
-  
+
   }
 
   const grouped = groupBySourceAndState(tableData);
@@ -209,6 +223,8 @@ function AlarmSummaryCardsInsideSidebarTicketing({
     >
       {/* Overall - All Sources */}
       <Grid size={{ xs: 12, sm: 6, md: 12 }}>
+
+
         <StatusCard>
           {/* Center All Sources + right count (click => show ALL, only if total > 0) */}
           <HeaderRow

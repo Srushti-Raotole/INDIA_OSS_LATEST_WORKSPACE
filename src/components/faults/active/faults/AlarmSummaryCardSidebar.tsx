@@ -4,12 +4,15 @@ import styled from '@emotion/styled';
 import { DynamicTableRow } from '../../../../store/types';
 
 const StatusCard = styled(Box)(() => ({
-  backgroundColor: "#7e7d7dff",
+  // backgroundColor: "#7e7d7dff",
+  backgroundColor: "#455a64",
+  color: "#ecf0f1",
   borderRadius: "1.5vh",
   padding: "1vh 0.6vw",
   minWidth: "9vw",
   textAlign: 'center' as const,
 }));
+
 
 const StatusChip = styled('div')<{
   chipcolor?: "Critical" | "Major" | "Minor" | "default";
@@ -31,12 +34,25 @@ const StatusChip = styled('div')<{
 
   border: selected ? '0.1vw solid white' : 'none',
 
-  ...(chipcolor === "Major" && { backgroundColor: "#e5990cff", color: "white" }),
-  ...(chipcolor === "Critical" && { backgroundColor: "#f11212ff", color: "white" }),
-  ...(chipcolor === "Minor" && { backgroundColor: "#eed812ff", color: "white" }),
+  // ...(chipcolor === "Major" && { backgroundColor: "#e5990cff", color: "white" }),
+  ...(chipcolor === "Major" && { backgroundColor: "#F57C00", color: "white" }),
+  // ...(chipcolor === "Critical" && { backgroundColor: "#f11212ff", color: "white" }),
+  ...(chipcolor === "Critical" && { backgroundColor: "#D32F2F", color: "white" }),
+  // ...(chipcolor === "Minor" && { backgroundColor: "#eed812ff", color: "white" }),
+  ...(chipcolor === "Minor" && { backgroundColor: "#FBC02D", color: "white" }),
+  // ...(chipcolor === "default" && { backgroundColor: "#b0ababff", color: "white" }),
   ...(chipcolor === "default" && { backgroundColor: "#b0ababff", color: "white" }),
-}));
 
+}));
+const getTitleColor = (val) =>
+  val === "MCP" ? "#009688" :
+    val === "NFMT" ? "#8283eb" :
+      val === "EPNM" ? "#4CAF50" :
+        val === "CONC" ? "#FF9800" :
+          val === "ADVA" ? "#9C27B0" :
+            val === "IFNR" ? "#3F51B5" :
+              val === "TLMR" ? "#E91E63" :
+                "#607D8B";
 // Table field keys
 const F = { TRAP_SOURCE: 'Adapter', SEVERITY: 'Severity' };
 const NORM = (v?: string | null) => (v ?? '').toString().trim();
@@ -51,14 +67,21 @@ const normSevForChip = (s?: string | null) => {
   return NORM(s);
 };
 
+// interface AlarmSummaryCardsProps {
+//   tableData: DynamicTableRow[];
+//   alarmSeveritySelected: string;
+//   setAlarmSeveritySelected: (severity: string) => void;
+//   alarmSourceSelected: string;
+//   setAlarmSourceSelected: (src: string) => void;
+// }
 interface AlarmSummaryCardsProps {
-  tableData: DynamicTableRow[];
+  tableData?: DynamicTableRow[];      // keep existing
+  data?: DynamicTableRow[];           // alias from parent
   alarmSeveritySelected: string;
   setAlarmSeveritySelected: (severity: string) => void;
   alarmSourceSelected: string;
   setAlarmSourceSelected: (src: string) => void;
 }
-
 /** Center title + right count header (count clickable) */
 const HeaderRow = ({
   title,
@@ -81,39 +104,22 @@ const HeaderRow = ({
     }}
   >
     {/* Title center */}
-    <Typography
-      variant="body2"
-      sx={{
-        color: "#ffffff",
-        fontSize: "1.6vh",
-        fontWeight: 600,
-        width: "100%",
-        textAlign: "center",
-        lineHeight: 1.2,
-        userSelect: "none",
-      }}
-    >
-      {title}
-    </Typography>
-
-    {/* Count right end (absolute) - CLICKABLE ONLY IF total > 0 */}
     <Box
       onClick={total > 0 ? onTotalClick : undefined}
       sx={{
-        position: "absolute",
-        right: 0,
-        px: "0.5vw",
-        py: "0.2vh",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "0.5vw",
+        px: "0.4vw",
+        py: "0.1vh",
         borderRadius: "1vh",
         cursor: total > 0 ? "pointer" : "not-allowed",
         pointerEvents: total > 0 ? "auto" : "none",
         opacity: total > 0 ? 1 : 0.45,
         userSelect: "none",
-        fontSize: "1.8vh",
-        fontWeight: 700,
-        color: "#ffffff",
 
-        backgroundColor: "rgba(255,255,255,0.15)",   // default visible button feel
+        backgroundColor: "rgba(255,255,255,0.15)",
         transition: "all 0.15s ease",
 
         "&:hover": total > 0
@@ -122,14 +128,41 @@ const HeaderRow = ({
 
         "&:active": total > 0
           ? {
-              backgroundColor: "rgba(255,255,255,0.35)",
-              transform: "scale(0.94)",
-            }
+            backgroundColor: "rgba(255,255,255,0.35)",
+            transform: "scale(0.96)",
+          }
           : undefined,
       }}
     >
-      {total}
+      {/* Title */}
+      <Typography
+        variant="body2"
+        sx={{
+          color: "#ffffff",
+          fontSize: "1.6vh",
+          fontWeight: 600,
+          lineHeight: 1.2,
+        }}
+      >
+        {title}
+      </Typography>
+
+      {/* Count */}
+      <Box
+        sx={{
+          px: "0.1vw",
+          py: "0.01vh",
+          borderRadius: "1vh",
+          fontSize: "1.6vh",
+          fontWeight: 700,
+          color: "#ffffff",
+          // backgroundColor: "rgba(255,255,255,0.25)",
+        }}
+      >
+        {total}
+      </Box>
     </Box>
+
   </Box>
 );
 
@@ -141,8 +174,8 @@ function AlarmSummaryCardsInsideSidebar({
   setAlarmSourceSelected,
 }: AlarmSummaryCardsProps) {
 
-  const PRESET_SOURCES = ['MCP', 'NFMT',] as const;
-  const ALARM_SEVERITIES: Array<'Critical'|'Major'|'Minor'> = ['Critical','Major','Minor'];
+  const PRESET_SOURCES = ['MCP', 'NFMT','CONC','IFNR','ADVA', 'TLMR', 'EPNM', ] as const;
+  const ALARM_SEVERITIES: Array<'Critical' | 'Major' | 'Minor'> = ['Critical', 'Major', 'Minor'];
 
   // overall total count
   const overallTotal = tableData?.length ?? 0;
@@ -185,7 +218,7 @@ function AlarmSummaryCardsInsideSidebar({
 
           {/* Center All Sources + right count (click => show ALL, only if total > 0) */}
           <HeaderRow
-            title="All Sources"
+            title="All Adapters"
             total={overallTotal}
             onTotalClick={() => resetToAll('ALL')}
           />

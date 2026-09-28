@@ -1,3 +1,4 @@
+
 import * as React from 'react';
 import { Box, SxProps } from '@mui/material';
 import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
@@ -17,9 +18,9 @@ type Props = {
   toDate: Date | null;
   onChange: (next: { from: Date | null; to: Date | null }) => void;
   sx?: SxProps;
-  format?: string; // optional format
-  heightPx?: number; // optional height control
-  fontRem?: number; // optional font control
+  format?: string; 
+  heightPx?: number; 
+  fontRem?: number; 
 };
 
 const DateTimeRangeCompact: React.FC<Props> = ({
@@ -27,9 +28,9 @@ const DateTimeRangeCompact: React.FC<Props> = ({
   toDate,
   onChange,
   sx,
-  format = 'YYYY/MM/DD HH:mm:ss', // 24-hr UI format
-  heightPx = 20,
-  fontRem = 0.8,
+  format = 'YYYY/MM/DD HH:mm:ss', 
+  heightPx = 28, // Slightly increased from 20 to 32 so the text isn't vertically crushed
+  fontRem = 0.75,
 }) => {
   // JS Date -> Dayjs in IST for display
   const toIstDayjs = (d: Date | null): Dayjs | null =>
@@ -37,20 +38,29 @@ const DateTimeRangeCompact: React.FC<Props> = ({
 
   // High-specificity SX targets actual input
   const inputSx = {
+    backgroundColor: '#f1f5f9', // Added a slight background to match standard inputs
+    borderRadius: '6px',
     '& .MuiOutlinedInput-root': {
       height: heightPx,
+      minWidth: '250px', //  FORCES THE INPUT TO BE WIDER
     },
     '& .MuiOutlinedInput-input, & .MuiInputBase-input, & input': {
       fontSize: `${fontRem}rem`,
-      padding: '2px 6px',
+      padding: '2px 10px',
       lineHeight: 1,
+      color: '#334155',
     },
-    '& .MuiSvgIcon-root': { fontSize: '1rem' },
+    '& fieldset': {
+      border: 'none', // Cleaner look, removes the double border if wrapped
+    },
+    '& .MuiSvgIcon-root': { fontSize: '1.1rem', color: '#64748b' },
     '& .MuiIconButton-root': { padding: 0.25 },
   } as const;
 
   const labelSx = {
     fontSize: `${fontRem}rem`,
+    top: '-4px', // Adjust label position for compact height
+    color: '#64748b',
   } as const;
 
   const inlineInputStyle: React.CSSProperties = {
@@ -59,15 +69,7 @@ const DateTimeRangeCompact: React.FC<Props> = ({
     lineHeight: 1,
   };
 
-  // Common views + steps including seconds
-  const views: readonly any[] = [
-    'year',
-    'month',
-    'day',
-    'hours',
-    'minutes',
-    'seconds',
-  ];
+  const views: readonly any[] = ['year', 'month', 'day', 'hours', 'minutes', 'seconds'];
   const timeSteps = { hours: 1, minutes: 1, seconds: 1 };
 
   return (
@@ -76,7 +78,7 @@ const DateTimeRangeCompact: React.FC<Props> = ({
         sx={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
-          gap: 0.5,
+          gap: 1.5, //  Increased gap slightly so they don't touch
           alignItems: 'center',
           ...sx,
         }}
@@ -86,19 +88,20 @@ const DateTimeRangeCompact: React.FC<Props> = ({
           value={toIstDayjs(fromDate)}
           onChange={(v) =>
             onChange({
-              from: v ? v.toDate() : null, // v already IST, Date = same instant
+              from: v ? v.toDate() : null,
               to: toDate,
             })
           }
           format={format}
-          timezone={IST_TZ}      // force IST UI
+          timezone={IST_TZ}
           views={views}
           timeSteps={timeSteps}
-          ampm={false}           //  24-hr clock: 13, 14, 15...
+          ampm={false}
           reduceAnimations
           slotProps={{
             textField: {
               size: 'small',
+              fullWidth: true, //  Ensures it fills the grid column
               InputProps: { sx: inputSx },
               InputLabelProps: { sx: labelSx },
               inputProps: { style: inlineInputStyle },
@@ -117,14 +120,15 @@ const DateTimeRangeCompact: React.FC<Props> = ({
             })
           }
           format={format}
-          timezone={IST_TZ}      // force IST UI
+          timezone={IST_TZ}
           views={views}
           timeSteps={timeSteps}
-          ampm={false}           //  24-hr clock here too
+          ampm={false}
           reduceAnimations
           slotProps={{
             textField: {
               size: 'small',
+              fullWidth: true, //  Ensures it fills the grid column
               InputProps: { sx: inputSx },
               InputLabelProps: { sx: labelSx },
               inputProps: { style: inlineInputStyle },
@@ -136,6 +140,5 @@ const DateTimeRangeCompact: React.FC<Props> = ({
     </LocalizationProvider>
   );
 };
+
 export default DateTimeRangeCompact;
-
-

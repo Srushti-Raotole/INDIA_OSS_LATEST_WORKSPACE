@@ -1,10 +1,9 @@
-// store/userSlice.ts
-import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface User {
   userId: number;
   userName: string;
-  role: string;
+  role: "ADMIN_USER" | "NOC_USER" | "VIDEO_USER";
   status: string;
 }
 
@@ -16,14 +15,14 @@ const initialState: UserState = {
   user: null,
 };
 
-export const userSlice = createSlice({
-  name: 'user',
+const userSlice = createSlice({
+  name: "user",
   initialState,
   reducers: {
-    setUser: (state, action: PayloadAction<User>) => {
+    setUser(state, action: PayloadAction<User>) {
       state.user = action.payload;
     },
-    clearUser: (state) => {
+    clearUser(state) {
       state.user = null;
     },
   },

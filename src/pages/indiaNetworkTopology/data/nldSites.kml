@@ -1,0 +1,3295 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="ltc_india_nld_route5_feb_2026_pop" id="ltc_india_nld_route5_feb_2026_pop">
+	<SimpleField name="Seq" type="string"></SimpleField>
+	<SimpleField name="Link Name" type="string"></SimpleField>
+	<SimpleField name="Type" type="string"></SimpleField>
+	<SimpleField name="Conn Type" type="string"></SimpleField>
+	<SimpleField name="layer" type="string"></SimpleField>
+	<SimpleField name="path" type="float"></SimpleField>
+</Schema>
+<Folder><name>ltc_india_nld_route5_feb_2026_pop</name>
+  <Placemark>
+	<name>Shankarpally</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">1</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.14917,17.4540199998762,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Nasapur</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">2</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.38951,17.7553099998743,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Gajwel</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">3</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.775,17.8713599998736,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Siddipet</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">4</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.83656,18.1063099998721,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Durshed</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">5</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.17821,18.4549799998699,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Ramagundam</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">6</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.44619,18.748589999868,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Jagityal</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">7</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.93521,18.8527599998674,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Nirmal</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">8</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.38272,19.080949999866,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bhainsa</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">9</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.97757,19.1032499998659,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Ritha</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">10</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.662345,19.2015979998653,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Parbhani</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">11</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>76.80780724,19.2668294098648,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Rupur</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">12</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.28645807,19.5947975198628,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pusad</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">13</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.55171008,19.896248579861,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Yavatmal</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">14</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.20758637,20.3697081998582,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Wardha</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">15</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.60711999,20.7273207898561,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Ambazari</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">16</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.968614,21.1427809998537,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Karanja</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">17</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.41439,21.1298199998538,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Badnera</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">18</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.75684,20.8603399998553,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Akola</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">19</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.024216,20.7524449998559,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Malkapur</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">20</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>76.208453,20.913670999855,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bhusawal</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">21</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>75.808701,21.0198629998544,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pachora</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">22</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>75.447226,20.6829599998564,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Chalisgaon</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">23</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.981509,20.4461049998578,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Dhule</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">24</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.814454,20.9332049998549,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bhabaleshwer</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">25</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.492796,19.6196619998627,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Nashik</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">26</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.886156,19.9790119998606,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Thyssen</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">27</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.665594,19.8298859998614,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>400 KV Dindi</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">28</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.6752516500001,16.6177931298816,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Nanoor 400KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">29</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.106111,15.7111109998876,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Gooty</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">30</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.658247,15.1497129998914,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Ananthpaur</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">31</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.638752,14.6966569998944,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>RTPP 400 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">32</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.460561,14.7037089998944,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>CKPalli 220 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">33</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.801038,14.3831739998966,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kalikiri 400 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">34</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.756304,13.6535989999016,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Chittoor 400 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">35</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.223333,13.2163889999046,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Palamaneru 220 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">36</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.758518,13.2017379999048,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kuppam 132 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">37</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.348083,12.737801999908,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Berigai</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">38</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.96525,12.8074299999075,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Polupalli</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">39</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.13712,12.594609999909,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Attibele</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">40</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.77332,12.7779799999077,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Malkaram 400KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">41</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.58135,17.5360789998757,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Narkatpalli 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">42</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.218337,17.1978419998778,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Suryapet 400KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">43</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.6933,17.1615999998781,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>VTPS stage-IV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">44</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.538731,16.5929199998818,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>TDK 220 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">45</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.423077,16.401828999883,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Satenpalli 400 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">46</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.13055,16.3985999998831,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Podili 400 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">47</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.699619,15.5851139998885,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Atmakuru 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">48</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.6592,14.6384599998949,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Manubolu 400KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">49</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.885278,14.2208329998977,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sullurpeta</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">50</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.99366,13.7097909999012,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Elavur</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">51</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.1144,13.455419999903,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Chinnapandur</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">52</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.950066,13.5291699999024,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Vengal</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">53</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.016258,13.2491589999044,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Rachaguneri 132 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">54</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.628338,13.7310399999011,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Mamidipally 440KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">55</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.481524,17.2336219998776,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Gachibowli 220 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">56</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.3260795,17.4697437998761,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Jatauli</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">57</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.474792,27.9993809998186,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bajhera</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">58</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.584267,27.2054509998222,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sone Ka Gurja</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">59</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.561084,26.4979789998254,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Mara</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">60</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.65537,26.1044949998273,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>KHORDAR</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">61</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.562866,25.4985169998303,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Singhwasa</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">62</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.36135,24.6512249998346,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Jaisinghpura</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">63</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.039522,24.2144029998368,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sandawata</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">64</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>76.515209,23.8095759998389,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Dhatrawada</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">65</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>76.27477,23.6410999998398,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Jagoti</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">66</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>75.823567,23.3935499998411,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kachibaroda</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">67</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>75.260894,23.1068739998427,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Mohankot</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">68</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.764759,22.9211629998437,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Dudhmal</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">69</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.141818,22.7888129998444,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Devgarhbaria</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">70</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.914296,22.7245379998447,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Jambudi</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">71</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.491955,22.497779999846,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>IP-02 Vaghodia</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">72</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.406671,22.2990799998471,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Vemar</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">73</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.224817,22.0122589998487,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Ankot</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">74</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.873744,21.8195289998498,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV 2</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">75</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.866455,21.602490999851,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV 4</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">76</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.806429,21.3560499998524,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV 6</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">77</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.793264,21.1196499998538,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV 7</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">78</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.886666,20.9407559998548,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV 11</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">79</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.010965,20.4714349998576,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>IP-03</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">80</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.01805,19.7834299998617,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV 16</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">81</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.0802,19.5420214998631,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Vegini</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">82</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.70798,21.6940199998505,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV 14</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">83</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.968307,19.9199569998609,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Phadge</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">84</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.18554,19.3679999998642,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Zazam</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">85</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>71.3408707,23.9436816998382,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bhatib</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">86</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.0531,24.6147999998347,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Mandoli</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">87</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.550082,25.0721299998324,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Penawa</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">88</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.0611882,25.5151669998302,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bilara</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">89</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.7377,26.1477499998272,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Begger</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">90</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.2268,26.6839999998246,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kuchaman</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">91</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.6285224,27.1380997998225,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Charawas</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">92</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>75.63158,28.0087299998186,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Mohindergarh</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">93</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>76.2155439273901,28.3611378656598,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bhabhar Nava</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">94</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>71.578248,24.0757489998375,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Faruk Nagar</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">95</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>76.8274,28.4480999998167,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Ghodbunder</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">96</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.8852089,19.2872571998647,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Dahanu</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">97</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.747147,19.9564259998607,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Anjurphata</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">98</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.04203561,19.2733980598648,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Chinchoti</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">99</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.89605,19.3753899998642,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Eklara</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">100</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.884188,20.3346259998584,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Valsad</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">101</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.961165,20.6114649998568,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kapletha</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">102</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.912873,21.0539199998542,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Masama Olpad</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">103</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.763732,21.2956609998528,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>koshamba</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">104</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.995232,21.4673669998518,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Asuria Bharuch</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">105</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.024673,21.77744499985,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Vernama Vadodara</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">106</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.181613,22.1637539998479,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Channi Bridge Vadodara</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">107</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.165724,22.3668439998467,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kanzari</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">108</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.923041,22.6162629998454,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kathlal</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">109</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.975193,22.8980609998438,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Gift City Lavarpar</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">110</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.706782,23.1801019998423,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Langhanaj</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">111</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.498024,23.4432699998409,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Shihi Village</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">112</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.349796,23.800638698799,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Chanasma</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">113</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.106254,23.7185689998394,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Baspa Village</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">114</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>71.6811,23.7209499998394,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>IP-4 Panvel</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">115</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.161829,18.9679359998667,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-02 Bharge</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">116</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.263506,18.5260139998694,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-04(Kuduk Khurd)</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">117</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.342252,17.9813089998729,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-06(Jalgaon)</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">118</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.200267,17.7279809998745,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-2 ( Shivene)</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">119</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.386272,17.2668429998774,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-4( Sakharpa)</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">120</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.721963,16.9913589998792,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-6( Pokhale)</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">121</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.189216,16.8546059998801,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-8</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">122</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.616916,16.4641729998826,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-10</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">123</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>75.084952,15.9127059998863,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-11</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">124</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>75.477622,15.5893249998884,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-13</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">125</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>75.785926,15.2942209998904,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-14</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">126</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>76.09022,14.7882899998938,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>IP-6 Guddadarangavanahalli</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">127</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>76.400898,14.2754719998973,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-17 Giddabanahalli</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">128</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>76.584448,14.0449999998989,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>IP-7 Devarahalli (Katamala)</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">129</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>76.893772,13.5634309999023,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-21 Muddagondanahalli Ramanagara</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">130</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.220037,13.0721259999056,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-1B Tavarekere</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">131</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.389825,12.9679579999064,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pimperkhed</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">132</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.754747,20.3064449998586,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-2B(Lagere Bridge)</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">133</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.519339,12.9962129999062,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-01 Nimoth</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">134</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.160843,28.2649140009367,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Lonikand</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">135</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.037335690332,18.6379576362302,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Umbraj(T-157)</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">136</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.073207,17.3946459998766,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Lonand(T-380)</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">137</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.10933283,18.1077743298721,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Karad</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">138</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.139662,17.2971529998772,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Koyna</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">139</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.596251,17.486161999876,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kiwle (T-99)</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">140</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.577184,18.8772049998673,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Parli-SS</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">141</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>76.458422,18.750859999868,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Shenwadi T222</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">142</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>74.80691,17.479419999876,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Solapur Gantry</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">143</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>75.73549,17.7775009998741,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Anawali T412</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">144</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>75.37548,17.6215799998751,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Timri</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">145</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.2144840805051,18.9016579741964,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Karla Phata</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">146</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.4803006298009,18.7608296948958,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Egra</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">147</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>87.5362231941961,21.8776435217777,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Jaleswar</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">148</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>87.2401012000283,21.7981389155387,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Narenderpur</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">149</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.8616945714529,19.3286793247921,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Ichhapuram</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">150</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.682297082127,19.1042386638017,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kharagpur 400kV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">151</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>87.2586122258715,22.3015813124422,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Arambagh 400KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">152</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>87.7190066897281,22.8884580723713,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Domjur 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">153</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.1805499868108,22.6514654741644,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Midnapur 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">154</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>87.3488510141385,22.4315008605739,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Jangipara 132KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">155</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.0795576540794,22.7244444683932,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Tarakeshwar 132KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">156</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.008256100983,22.8638159751287,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Nuziveedu</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">157</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.8600501180559,16.7869701268956,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>K.Kota</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">158</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>81.2038751591613,16.9990319886612,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bommuru</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">159</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>81.801819026554,16.9637786328195,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Samarlakota</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">160</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>82.1221458735912,17.0421452858732,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kalapaka</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">161</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.1202611789074,17.6134265146479,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Maradam</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">162</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.323591372616,18.420281607824,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Tekkali</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">163</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.2439347955335,18.5883581538116,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bhadrak</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">164</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>86.4838404560611,21.0440843169296,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Dubri Old</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">165</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.9886621707632,20.9719061633994,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Meramundall</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">166</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.2516059090516,20.8247848938961,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Balasore</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">167</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>86.8899267121385,21.509383182637,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Balugaon</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">168</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.1770900058105,19.6945607426445,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Khurda</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">169</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.6089966220197,20.1819842209895,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bidanasi</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">170</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.8464381441171,20.4710842152174,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Dhenkanal</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">171</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.5540243759178,20.6930530941609,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Goda</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">172</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.762126557176,20.9229160259076,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sahibabad 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">173</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.3332587,28.649183901,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Azamgarh 400 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">174</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.2083848009642,26.0915382401175,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Maharajganj (132KV)</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">175</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.5717918353718,27.1334987703769,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>FCI 132KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">176</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.3638449889674,26.814742529614,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Moradabad 400KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">177</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.740599158675,28.8273803863665,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sultanpur 400 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">178</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>82.0707781308371,26.2330107387693,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sarojini Nagar 400 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">179</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.8558635802426,26.7456789270856,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Dohna 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">180</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.439559499451,28.4651449716515,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Shahjahanpur 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">181</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.941582802937,27.9359423269149,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Muradnagar 400KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">182</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.487877420419,28.7980456535237,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Hardoi 220 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">183</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.148631584096,27.3739866028345,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sandila 132 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">184</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.4627942427328,27.0788514374891,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Rasra 220 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">185</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.840781236876,25.865426559379,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Deoria 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">186</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.754030807453,26.4825717060594,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Gorakhpur NEW 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">187</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.5040400438897,26.6843383960226,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Gajraula 220 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">188</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.3513956749508,28.8177409369379,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Simbhaoli 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">189</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.974690847504,28.7592625683156,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Faridnagar</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">190</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.6440620632521,28.7785546129972,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Hata 220kV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">191</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.6848290575713,26.7960222860184,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Rampur LILO</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">192</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.0903006426139,28.7135177824963,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Nagerghrah</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">193</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>81.5284253271218,26.4673267721176,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pran Nathpur Kalan</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">194</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>82.3968739107159,26.1339079996544,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Dariyapur palthi</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">195</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>82.7715040000001,26.0316355031069,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Ekam</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">196</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.3812183923278,27.2551100967712,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Nichlaul</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">197</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.7216620031245,27.3160749229836,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sanauli Border</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">198</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.4556042630616,27.4629071678513,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Dadri</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">199</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.5552183,28.5759408009984,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Khurja 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">200</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>77.8498170265033,28.3051945388235,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Harduaganj</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">201</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.1331083767413,28.0163169633983,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Etah 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">202</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.666040362706,27.5303408629091,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Mainpuri 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">203</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.0289708413058,27.2111865502676,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Panki 400KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">204</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.2383545722473,26.4794161574194,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Chhibramau 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">205</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.514235001916,27.1469739342366,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kanpur South</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">206</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.4188236177195,26.3696215595356,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Rewa ROAD 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">207</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>81.8378022474589,25.368669077914,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sahupuri 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">208</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.0767844433718,25.289775218008,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Obra</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">209</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>82.9756284836728,24.4464572701693,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>220 KV MZP</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">210</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>82.5404429762416,25.1414181666726,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Zamania</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">211</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.5624396541323,25.416047152849,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sarnath 400KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">212</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.0844504176324,25.420129226415,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Ghazipur 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">213</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.4979545764356,25.5794375583289,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sirathu 220KV LILO</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">214</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>81.1943,25.3835099998309,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Robertsganj</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">215</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.0621866675789,24.6483254137781,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Ghorawal</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">216</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>82.9726855746896,24.7040409386256,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Fathehpur 2</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">217</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.8399350122071,25.9443049042002,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Fathehpur 1</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">218</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.7919452823001,25.899323194532,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kalikapurwa</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">219</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.0505572317335,26.7811097223483,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Dalkhola 220 kV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">220</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>87.8267994517909,25.8862350639078,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Raigunj 132kV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">221</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.124424218431,25.6363556638118,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Maldah 132 KVA</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">222</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.1234660895437,25.0049856787393,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Dhulian 132kv</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">223</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>87.9208137674999,24.6373526707563,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Katwa 132 KVA</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">224</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.1242968398429,23.6351106012874,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Jeerat 220 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">225</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.5388738945771,22.8822519218739,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Dharampur</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">226</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.5046194112171,22.9357770538259,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Khanyan 132 KVA</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">227</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.3189512878626,23.0586272379004,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>New Sagar Dighi 220 KVA</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">228</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.128761731619,24.1981919996183,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Gajol 220kV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">229</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.1593854881978,25.150437705894,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Harischandarpur 132KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">230</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>87.8767809324836,25.425837061019,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Lalgola 132 KVA</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">231</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.2461808190048,24.3943797704628,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Newtown AA IIC</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">232</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.4668444579703,22.6322785145627,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Gokarna 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">233</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.125359444435,24.0455567159557,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kishanganj New 220KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">234</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>87.92904183,26.0934972998274,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>BAISI 132/33KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">235</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>87.82256545,25.8845275298284,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Forbisganj 132/33KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">236</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>87.24585787,26.3044513298264,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Katiya 132/33KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">237</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>86.95575616,26.4986824198255,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Supaul 132/33KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">238</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>86.61059677,26.1282380998272,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Jhajhanpur 132/33KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">239</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>86.350005,26.1208519998273,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pandaul 132/33KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">240</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>86.06527341,26.2475570598266,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Darbhanga 132 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">241</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.9125029955467,26.0912949982136,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Jainagar 132/33KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">242</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>86.127006,26.595776999825,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sitamarhi 132/33 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">243</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.523326,26.5545559998252,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Motihari 132/33KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">244</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.895796,26.6236172998249,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Raxaul 132/33KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">245</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.84113048,26.9546483998234,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Betiah132/33KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">246</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.54464983,26.804819099824,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Ramgarh 132/33KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">247</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.64908519,25.2880026698313,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Rafiganj 132KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">248</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.6202694025728,24.806704026615,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Chandauti 132KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">249</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.9669056408246,24.7785439727665,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Jahanabad 132KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">250</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.98423645,25.1876380098318,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bihar Sharif</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">251</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.512775,25.1679839998319,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Mokama 220/132 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">252</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.94067876,25.3809021098308,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Samastipur 132/33 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">253</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.7693654,25.8390376998286,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>PUSAULI 220/132KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">254</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>83.7082167644935,25.128412448033,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Nirmali 132/33KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">255</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>86.4443526863799,26.1822213734264,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bongaon</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">256</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.7861514120102,23.057760774062,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Krishnanagar</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">257</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.4825415240947,23.3679022766643,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bighati</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">258</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>88.3163021778898,22.8173325947171,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Unnao</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">259</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.5485126895151,26.5674971887329,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Srisailum</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">260</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.9034803302438,16.0956126,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Tower 282</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">261</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.7638825580498,13.6728151176557,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Chitbargaon</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">262</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.0230671704433,25.7469977578061,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Ballia</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">263</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.1371457811851,25.7680091327521,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Natrampalli</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">264</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.51264089,12.5909552566254,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Madhanur</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">265</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.8352752591428,12.8594698878368,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sathuvacherri</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">266</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.1617618295714,12.9346675515293,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sumaithangi</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">267</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.4389017195714,12.8940835504684,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sunguvarchatram</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">268</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.867670383429,12.9222173550857,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>220KV Thavar / Dhanera</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">269</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.011436,24.5335599996702,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>220KV Tharad</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">270</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>71.630272,24.3773249996718,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>400KV Kosamba</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">271</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.073128,21.519399999703,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>400KV Soja</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">272</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.598404,23.3652709996826,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>220KV Haldarwa</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">273</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.03051,21.7532499997004,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>220KV Jambuva</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">274</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.191261,22.2153759996952,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>220KV Bhilad</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">275</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.902977,20.2701779997176,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>220KV Atul GIS</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">276</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.962151,20.5379849997144,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>220KV Mota /Bardoli</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">277</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.069786,21.1866469997068,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>220KV Mehsana</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">278</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.401459,23.6144489996799,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>220KV Mogar</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">279</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>73.015991,22.5205229996918,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>220KV Barejadi(GIS)</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">280</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.669968,22.8881859996878,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>220KV Ranasan</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">281</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>72.674606,23.1089919996854,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Gokulpura</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">282</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>75.1839816750609,27.5605508973746,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Barjora 132 kv</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">283</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>87.2868702527713,23.4001711836434,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bishnupur</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">284</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>87.3138172894192,23.1006786051886,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Chhapra 132/33KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">285</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.770994,25.778267,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Vaishali 132/33KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">286</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.1394248791946,25.97246833516,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>MTPS 220/132KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">287</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.379092,26.0935759998274,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-31</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">288</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>86.82589,23.5926399998456,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-29</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">289</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>86.39632333,23.6315599998456,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-25</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">290</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>86.092989,23.8283669998456,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>IPO4 Dobhi</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">291</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.980615,24.5137589998456,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV02DB</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">292</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.080724,24.7634739998456,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV-20</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">293</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.2722229786546,24.3154789027867,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>GAIL SV Station 22 Gorhar</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">294</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>85.675485,24.1454533298456,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SV33</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">295</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>87.2767460517175,23.4460528976019,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bariya Site-2</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">296</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.45818,25.77209,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bariya Site-1</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">297</SimpleData>
+		<SimpleData name="Type">Nokia</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>84.46489,25.76684,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Maheshwaram</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">298</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.53030019,17.0523607697576,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pandhurna SS</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">299</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.545486132123,21.5886368237023,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Chhindwara 220kv</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">300</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.97982,22.02964,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Morwa132</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">301</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>82.6624868435881,24.2033218559837,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>DONGRITAL 132</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">302</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>82.3093883019415,23.9243860587913,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Amarkantak 220</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">303</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>81.6644205136997,23.172691132039,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Shahdol 220</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">304</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>81.37951,23.28191,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Dindori 132</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">305</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>81.1236770567306,22.9327648649344,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Nainpur 132</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">306</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.1483352397052,22.4311658295501,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Shahdol 132 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">307</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>81.3803679566309,23.2822577872759,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Boregaon 132kv</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">308</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.8170176415049,21.5536584800702,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ANPARA-T</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">309</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>82.7888073030764,24.2076131054225,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Koradi 400/200kv</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">310</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.0960738191632,21.246563659684,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Chourai 132kv</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">311</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.2712305555556,22.0379878169154,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>T-727</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">312</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.0205,20.0298,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Wani</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">313</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.9798,20.042111,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>T-73</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">314</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.2211,17.6803,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>T-48</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">315</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.4035,17.9795,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>T-187</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">316</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.5704,18.4461,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>T-343</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">317</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.5541,18.9387,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>T-203</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">318</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.8871,17.3452,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Warora</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">319</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.01844,20.23308,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>T-437</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">320</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.4528,19.2247,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>T-612</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">321</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.223,19.752,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>T-143</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">322</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>79.798136,22.342337,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Site-4</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">323</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>80.65752,22.81832,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Annupur 220 KV</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">324</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>81.6644205136997,23.1726911323544,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Site-5</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">325</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>81.80085,23.59325,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Site-1</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">326</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.8897715041435,21.4013495412619,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Site-2</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">327</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>78.9337968078521,21.3812242426057,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Site-1</name>
+	<ExtendedData><SchemaData schemaUrl="#ltc_india_nld_route5_feb_2026_pop">
+		<SimpleData name="Seq">328</SimpleData>
+		<SimpleData name="Type">ciena</SimpleData>
+		<SimpleData name="Conn Type">NLD</SimpleData>
+		<SimpleData name="layer">LTC India NLD Route-5 Feb 2026; Sites; Sites</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>82.8215087,24.3204777996725,0</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
+	

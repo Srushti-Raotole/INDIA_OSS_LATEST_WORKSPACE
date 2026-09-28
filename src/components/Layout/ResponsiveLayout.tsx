@@ -1,7 +1,4 @@
 
-
-
-// src/components/layout/ResponsiveLayout.tsx
 import { Box } from "@mui/material";
 import { ReactNode } from "react";
 

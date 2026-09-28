@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="JGA_N_Land__TY2_ATT_CC1_.kmz" id="JGA_N_Land__TY2_ATT_CC1_.kmz">
+	<SimpleField name="timestamp" type="string"></SimpleField>
+	<SimpleField name="begin" type="string"></SimpleField>
+	<SimpleField name="end" type="string"></SimpleField>
+	<SimpleField name="altitudeMode" type="string"></SimpleField>
+	<SimpleField name="tessellate" type="int"></SimpleField>
+	<SimpleField name="extrude" type="int"></SimpleField>
+	<SimpleField name="visibility" type="int"></SimpleField>
+	<SimpleField name="drawOrder" type="int"></SimpleField>
+	<SimpleField name="icon" type="string"></SimpleField>
+</Schema>
+<Folder><name>JGA_N_Land__TY2_ATT_CC1_.kmz</name>
+  <Placemark>
+	<name>TY2-ATT CC1</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#JGA_N_Land__TY2_ATT_CC1_.kmz">
+		<SimpleData name="tessellate">1</SimpleData>
+		<SimpleData name="extrude">0</SimpleData>
+		<SimpleData name="visibility">-1</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><coordinates>139.748028300489,35.6174055702191,0 139.747586184431,35.6172740228147,0 139.746774592198,35.6193164170201,0 139.746050642811,35.620925291442,0 139.745347425835,35.6225854610131,0 139.744937551695,35.6254516978541,0 139.744759182556,35.6270255079046,0 139.745253362177,35.632495301251,0 139.745335343713,35.6332777330054,0 139.747987852095,35.6416942749835,0 139.750734412401,35.6430072021987,0 139.752226636159,35.6430075361464,0 139.754118939959,35.6466457851355,0 139.754913692876,35.6483733224426,0 139.753023435001,35.6491116226039,0 139.75376598775,35.6511152826931,0 139.7541194186,35.6531776980968,0 139.755177638706,35.6601308178906,0 139.756714349064,35.6620726762008,0 139.759396004914,35.6653328023317,0 139.760569222151,35.6667171894936,0 139.755039957257,35.6686699339869,0 139.756191298715,35.6708038272662,0 139.757597369109,35.6731165906525,0 139.759762983637,35.6753578143443,0 139.76111902393,35.6788491403436,0 139.762220512543,35.6821973887624,0 139.763779962942,35.686998549043,0 139.766244482558,35.6866216431068,0 139.766553230298,35.6880147217065,0 139.767003675165,35.6879782224911,0 139.766585063383,35.6877229389241,0 139.76636898788,35.6865321627588,0 139.763802503752,35.68690414649,0 139.761170610581,35.6786988086329,0 139.75981445229,35.6750501734155,0 139.763293498249,35.6725705192369,0 139.767347789024,35.6694157074525,0 139.771531120946,35.6658289756207,0 139.773610654243,35.6635840679574,0 139.778188791001,35.6590026741339,0 139.7872331505,35.6499313214665,0 139.789169164082,35.6480522669849,0 139.789829083361,35.64711854302,0 139.790625090415,35.6476515161477,0</coordinates></LineString>
+  </Placemark>
+  <Placemark>
+	<name>CC1 AT Tokyo</name>
+	<ExtendedData><SchemaData schemaUrl="#JGA_N_Land__TY2_ATT_CC1_.kmz">
+		<SimpleData name="tessellate">-1</SimpleData>
+		<SimpleData name="extrude">0</SimpleData>
+		<SimpleData name="visibility">-1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>139.790802995338,35.6479014694578,0</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

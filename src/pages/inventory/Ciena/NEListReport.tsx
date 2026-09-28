@@ -1,64 +1,70 @@
+
 import React, { useEffect, useState } from "react";
-import { Grid, Divider, Box } from "@mui/material";
+import { Divider, Box, IconButton, Typography } from "@mui/material";
 import { useOutletContext } from "react-router-dom";
-import axiosClient from "../../../utils/axiosData/axioxClient";
-import { FETCH_INVENTORY_NE_LIST_REPORT_DATA } from "../../../utils/axiosData/apis";
-import CommonTable from "../../../components/common/CommonTable";
+import axiosClient from "@/api/axiosClient";
+import { FETCH_INVENTORY_NE_LIST_REPORT_DATA } from "@/api/apis";
 import ExcelDownloadButton from "../../../components/common/ExcelDownloadButton";
 
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
+import InvReportTable from "../InventoryReportTable";
+import FullPageLoader from "../../../components/common/FullPageLoader";
+import { logActivity } from "../../../utils/activityLogger";
+
+// ---------- Lucide React Custom Control Icons ----------
+import { Menu } from "lucide-react";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-type OutletContextType = { open: boolean };
+type OutletContextType = { 
+  open: boolean;
+  handleDrawerOpen: () => void;
+};
 
 const NEListReport: React.FC = () => {
-  const { open } = useOutletContext<OutletContextType>();
+  const { open, handleDrawerOpen } = useOutletContext<OutletContextType>();
   const [tableData, setTableData] = useState<Record<string, any>[]>([]);
   const [columnOrder, setColumnOrder] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   const TABLE_ID = "ne-list-report-table";
 
- // convert any incoming datetime to IST string
   const convertToIST = (val: any) => {
-  if (!val) return val;
+    if (!val) return val;
+    const str = String(val).trim();
+    const hasTZ = /Z$/.test(str) || /[+-]\d{2}:\d{2}$/.test(str);
 
-  const str = String(val).trim();
+    let d;
+    if (hasTZ) {
+      d = dayjs(str).tz("Asia/Kolkata");
+    } else {
+      d = dayjs.tz(str, "Asia/Kolkata");
+    }
 
-  // if string already has timezone info
-  const hasTZ =
-    /Z$/.test(str) || /[+-]\d{2}:\d{2}$/.test(str);
+    if (!d.isValid()) return val;
+    return d.format("YYYY-MM-DD HH:mm:ss");
+  };
 
-  let d;
-  if (hasTZ) {
-    // convert whatever input is → IST
-    d = dayjs(str).tz("Asia/Kolkata");
-  } else {
-    // assume data already IST
-    d = dayjs.tz(str, "Asia/Kolkata");
-  }
-
-  if (!d.isValid()) return val;
-
-  return d.format("YYYY-MM-DD HH:mm:ss"); //  IST output
-};
-
+  useEffect(() => {
+    logActivity({
+      activity: "CIENA NE List Report page opened",
+      actionName: "NE_LIST_REPORT",
+      module: "INVENTORY",
+    });
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
-
-        const response = await axiosClient.get(`${FETCH_INVENTORY_NE_LIST_REPORT_DATA}`);
-
+        const response = await axiosClient.get(`${FETCH_INVENTORY_NE_LIST_REPORT_DATA}`, {});
+        
         let apiData = response.data;
         console.log("Fetched NE List Report Data:", apiData);
-        
-        // Standard normalization
+
         if (apiData && !Array.isArray(apiData)) {
           apiData = apiData.data || apiData.result || apiData.results || apiData.items;
         }
@@ -69,21 +75,15 @@ const NEListReport: React.FC = () => {
           return;
         }
 
-         // Convert the 2 specific columns to UTC
         const updated = apiData.map((item) => {
           const copy = { ...item };
-
-          // EXACT column
           copy["Last Synchronized"] = convertToIST(copy["Last Synchronized"]);
           copy["Last State Updated"] = convertToIST(copy["Last State Updated"]);
-
           return copy;
         });
 
-        // --------- DYNAMIC COLUMNS LOGIC HERE ----------
         if (updated.length > 0) {
-          const keys = Object.keys(updated[0]); // extract columns dynamically
-          setColumnOrder(keys);
+          setColumnOrder(Object.keys(updated[0]));
         }
 
         setTableData(updated);
@@ -99,78 +99,66 @@ const NEListReport: React.FC = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        backgroundColor: "#fff",
-        minHeight: "100vh",
-        padding: "1vh",
-        maxWidth: "100vw",
-        overflow: "hidden",
-      }}
-    >
-      {/* -------- Header Section -------- */}
-      <Grid container spacing="1vh" alignItems="center" sx={{ mb: "2vh", mt: "1vh" }}>
-        <Grid size={{ xs: 12, md: 4 }}>
-          <ExcelDownloadButton
-            data={tableData}
-            columnOrder={columnOrder}
+    <Box sx={{ backgroundColor: "#ffffff", height: "100%", width: "100%", display: "flex", flexDirection: "column" }}>
+      <Box
+        sx={{
+          padding: "0",
+          m: 0,
+          width: "100%",
+          height: "calc(100vh - 72px)", // Native viewport metric matching rest of system layout
+          overflow: "hidden",
+          position: "relative",
+        }}
+      >
+        {loading ? (
+          <FullPageLoader message="Loading CIENA NE List Report..." />
+        ) : (
+          <InvReportTable
+            dataObjects={tableData}
+            pageSize={25}
             tableId={TABLE_ID}
-            fileName="NE_List_Report"
-          />
-        </Grid>
+            renderTopToolbarCustomActions={() => (
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, flexWrap: 'nowrap' }}>
+                
+                {/* Embedded Inline Sidebar Open Controller Trigger */}
+                {!open && handleDrawerOpen && (
+                  <IconButton
+                    onClick={handleDrawerOpen}
+                    size="small"
+                    sx={{
+                      bgcolor: "#f1f5f9", color: "#475569", width: 32, height: 32, borderRadius: 1.5, border: "1px solid #e2e8f0",
+                      "&:hover": { bgcolor: "#e2e8f0" },
+                    }}
+                  >
+                    <Menu size={18} strokeWidth={2.5} />
+                  </IconButton>
+                )}
 
-        <Grid size={{ xs: 12, md: 4 }} sx={{ textAlign: "center" }}>
-          <Box
-            sx={{
-              backgroundColor: "#D3D3D3",
-              color: "#000",
-              padding: "1vh 2vh",
-              height: "4vh",
-              borderRadius: "2vh",
-              display: "inline-block",
-              fontWeight: 500,
-              fontSize: "1vw",
-            }}
-          >
-            NE LIST REPORT
-          </Box>
-        </Grid>
+                <ExcelDownloadButton
+                  data={tableData}
+                  columnOrder={columnOrder}
+                  tableId={TABLE_ID}
+                  fileName="Ciena_NE_List_Report"
+                />
 
-        <Grid size={{ xs: 12, md: 4 }} sx={{ textAlign: "right", pr: "1vh" }}></Grid>
-      </Grid>
-
-      <Divider />
-
-      {/* -------- Table Section -------- */}
-      <Grid container spacing="0.2vh">
-        <Grid size={{ xs: 12 }}>
-          <Box
-            sx={{
-              padding: "0",
-              position: "absolute",
-              maxHeight: "80vh",
-              maxWidth: !open ? "calc(100vw - 40px)" : "calc(100vw - 260px)",
-              overflowY: "auto",
-              overflowX: "auto",
-            }}
-          >
-            {loading ? (
-              <Box sx={{ textAlign: "center", padding: "2rem" }}>Loading...</Box>
-            ) : (
-              <CommonTable
-                columnOrder={columnOrder}
-                dataObjects={tableData}
-                pageSize={25}
-                onRowClick={undefined}
-                tableId={TABLE_ID}
-              />
+                {/* Center-locked header text title with typography boundary ellipsis constraints */}
+                <Typography 
+                  title="CIENA - NE LIST REPORT"
+                  sx={{ 
+                    fontSize: '0.8rem', fontWeight: 700, color: '#334155', textTransform: 'uppercase', letterSpacing: '0.04em',
+                    position: 'absolute', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', pointerEvents: 'auto',
+                    whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: open ? '35vw' : '50vw'
+                  }}
+                >
+                  CIENA - NE LIST REPORT
+                </Typography>
+              </Box>
             )}
-          </Box>
-        </Grid>
-      </Grid>
-    </div>
+          />
+        )}
+      </Box>
+    </Box>
   );
 };
 
 export default NEListReport;
-

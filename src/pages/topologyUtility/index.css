@@ -1,0 +1,55 @@
+
+@keyframes topology-alarm-pulse {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.05; }
+}
+
+.topology-alarm-pulse-line {
+  animation: topology-alarm-pulse 2s ease-in-out infinite;
+}
+
+@keyframes topology-node-glow {
+  0%, 100% { filter: drop-shadow(0 0 3px currentColor); }
+  50% { filter: drop-shadow(0 0 8px currentColor); }
+}
+
+.topology-node-alarmed {
+  animation: topology-node-glow 2s ease-in-out infinite;
+}
+
+.topology-canvas-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.topology-canvas-container svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.topology-sidebar-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.topology-sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.topology-sidebar-scroll::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 2px;
+}
+
+.topology-table-zebra tr:nth-child(even) {
+  background: hsl(var(--muted) / 0.3);
+}
+
+.topology-tooltip {
+  pointer-events: none;
+  position: absolute;
+  z-index: 50;
+  max-width: 280px;
+}

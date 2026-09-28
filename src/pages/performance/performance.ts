@@ -1,0 +1,1 @@
+export type DbType = "live" | "current" | "historic";

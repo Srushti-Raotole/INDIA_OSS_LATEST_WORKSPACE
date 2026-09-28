@@ -1,4 +1,3 @@
-// src/utils/zoomDetection.ts
 export class ZoomDetectionManager {
   private baseWidth = 1920;
   private baseHeight = 1080;
@@ -10,15 +9,11 @@ export class ZoomDetectionManager {
     this.setupEventListeners();
   }
 
-  // Detect system DPI scaling
   private getSystemZoom(): number {
-    // Method 1: Using devicePixelRatio
     const dpr = window.devicePixelRatio || 1;
     
-    // Method 2: Using screen dimensions vs available dimensions
     const screenZoom = window.screen.width / window.screen.availWidth;
     
-    // Method 3: Create a test element to measure actual vs expected size
     const testDiv = document.createElement('div');
     testDiv.style.width = '1in';
     testDiv.style.height = '1in';
@@ -30,24 +25,18 @@ export class ZoomDetectionManager {
     const computedInch = testDiv.offsetWidth;
     document.body.removeChild(testDiv);
     
-    // Standard DPI is 96, so zoom = actual DPI / 96
     const dpiZoom = computedInch / 96;
     
     console.log('DPR:', dpr, 'Screen Zoom:', screenZoom, 'DPI Zoom:', dpiZoom);
     
-    // Use the most reliable method based on your testing
     return dpiZoom;
   }
 
-  // Detect browser zoom level
   private getBrowserZoom(): number {
-    // Method 1: Using screen width vs window width
     const browserZoom1 = window.screen.width / window.innerWidth / this.systemZoom;
     
-    // Method 2: Using outerWidth vs innerWidth (less reliable)
     const browserZoom2 = window.outerWidth / window.innerWidth;
     
-    // Method 3: Using media queries
     let browserZoom3 = 1;
     const mqTests = [
       { zoom: 0.25, mq: '(max-resolution: 30dpi)' },
@@ -75,7 +64,6 @@ export class ZoomDetectionManager {
     return browserZoom1;
   }
 
-  // Detect all zoom levels
   private detectZoomLevels(): void {
     this.systemZoom = this.getSystemZoom();
     this.browserZoom = this.getBrowserZoom();
@@ -83,7 +71,6 @@ export class ZoomDetectionManager {
     console.log('System Zoom:', this.systemZoom, 'Browser Zoom:', this.browserZoom);
   }
 
-  // Calculate the required compensation
   private calculateCompensation(): number {
     const totalZoom = this.systemZoom * this.browserZoom;
     const compensation = 1 / totalZoom;
@@ -93,32 +80,23 @@ export class ZoomDetectionManager {
     return compensation;
   }
 
-  // Apply zoom compensation
   public applyZoomCompensation(): void {
     const compensation = this.calculateCompensation();
     
-    // Apply to document body
     document.body.style.zoom = compensation.toString();
     
-    // Alternative: Apply via CSS transform
-    // document.body.style.transform = `scale(${compensation})`;
-    // document.body.style.transformOrigin = '0 0';
-    
-    // Also update CSS custom property for consistent scaling
+
     document.documentElement.style.setProperty('--zoom-compensation', compensation.toString());
   }
 
-  // Enhanced scaling with zoom compensation
   public applyEnhancedScaling(): void {
     const availableWidth = window.innerWidth;
     const availableHeight = window.innerHeight;
     
-    // Calculate base scale
     const scaleX = availableWidth / this.baseWidth;
     const scaleY = availableHeight / this.baseHeight;
     const baseScale = Math.min(scaleX, scaleY);
     
-    // Apply zoom compensation
     const compensation = this.calculateCompensation();
     const finalScale = baseScale * compensation;
     
@@ -129,7 +107,6 @@ export class ZoomDetectionManager {
       container.style.width = `${this.baseWidth}px`;
       container.style.height = `${this.baseHeight}px`;
       
-      // Center the scaled content
       const scaledWidth = this.baseWidth * finalScale;
       const scaledHeight = this.baseHeight * finalScale;
       const offsetX = (availableWidth - scaledWidth) / 2;
@@ -144,9 +121,7 @@ export class ZoomDetectionManager {
     console.log('Applied scaling - Base:', baseScale, 'Compensation:', compensation, 'Final:', finalScale);
   }
 
-  // Setup event listeners for zoom changes
   private setupEventListeners(): void {
-    // Listen for resize events (which can indicate zoom changes)
     window.addEventListener('resize', () => {
       setTimeout(() => {
         this.detectZoomLevels();
@@ -154,7 +129,6 @@ export class ZoomDetectionManager {
       }, 100);
     });
 
-    // Listen for DPI changes
     const mediaQuery = window.matchMedia('(resolution: 1dppx)');
     mediaQuery.addListener(() => {
       setTimeout(() => {
@@ -163,7 +137,6 @@ export class ZoomDetectionManager {
       }, 100);
     });
 
-    // Listen for zoom events (if supported)
     window.addEventListener('zoom', () => {
       setTimeout(() => {
         this.detectZoomLevels();
@@ -172,7 +145,6 @@ export class ZoomDetectionManager {
     });
   }
 
-  // Get current zoom information
   public getZoomInfo(): { systemZoom: number; browserZoom: number; totalZoom: number } {
     return {
       systemZoom: this.systemZoom,

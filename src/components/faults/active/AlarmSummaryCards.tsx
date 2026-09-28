@@ -60,8 +60,8 @@ function AlarmSummaryCards({
   setAlarmSourceSelected,
 }: AlarmSummaryCardsProps) {
 
-  // Preset sources: always show these in this order
-  const PRESET_SOURCES = ['MCP', 'NFMT'] as const;
+  // Preset sources: always show these in this order  
+    const PRESET_SOURCES = ['CONC','ADVA','IFNR','TLMR','EPNM','MCP','NFMT'] as const;
   const ALARM_SEVERITIES: Array<'Critical'|'Major'|'Minor'> = ['Critical','Major','Minor'];
 
   // Build grouped map from data
@@ -89,7 +89,7 @@ function AlarmSummaryCards({
       <Grid size={{xs:12,sm:6,md:2}} >
         <StatusCard>
           <Typography variant="body2" sx={{ color: '#ffffff', fontSize: "1.6vh", fontWeight: 600, mb: '0.5vh' }}>
-            All Sources
+            All Adapters
           </Typography>
           <Grid container spacing='0.5vh' justifyContent="center">
             {ALARM_SEVERITIES.map((sev, i) => (

@@ -1,61 +1,54 @@
 import React, { useEffect, useState } from "react";
-import { Grid, Divider, Box } from "@mui/material";
+import { Divider, Box, IconButton, Typography } from "@mui/material";
 import { useOutletContext } from "react-router-dom";
-import axiosClient from "../../../utils/axiosData/axioxClient";
-import { FETCH_INVENTORY_NFMT_DEVICE_DETAILS_DATA } from "../../../utils/axiosData/apis";
-import CommonTable from "../../../components/common/CommonTable";
+import axiosClient from "@/api/axiosClient";
+import { FETCH_INVENTORY_NFMT_DEVICE_DETAILS_DATA } from "@/api/apis";
 import ExcelDownloadButton from "../../../components/common/ExcelDownloadButton";
+import InvReportTable from "../InventoryReportTable";
+import FullPageLoader from "../../../components/common/FullPageLoader";
+import { logActivity } from "../../../utils/activityLogger";
 
-type OutletContextType = { open: boolean };
+import { Menu } from "lucide-react";
+
+type OutletContextType = { 
+  open: boolean;
+  handleDrawerOpen: () => void;
+};
 
 const NfmtDeviceDetailsReport: React.FC = () => {
-  const { open } = useOutletContext<OutletContextType>();
+  const { open, handleDrawerOpen } = useOutletContext<OutletContextType>();
   const [tableData, setTableData] = useState<Record<string, any>[]>([]);
   const [columnOrder, setColumnOrder] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   const TABLE_ID = "ne-list-report-table";
 
-  // ===  "YYYY-MM-DD HH:mm:ss", NO timezone conversion ===
   const formatToSimpleDateTime = (val: any) => {
     if (!val) return val;
-
     const str = String(val).trim();
-
-    // Match: 2025-12-01T15:12:47, 2025-12-01 15:12:47, etc.
-    const match = str.match(
-      /^(\d{4}-\d{2}-\d{2})[T ](\d{2}:\d{2}:\d{2})/
-    );
-
-    if (!match) {
-      // if pattern do not match then return original value
-      return val;
-    }
-
-    const datePart = match[1]; // YYYY-MM-DD
-    const timePart = match[2]; // HH:mm:ss
-
-    return `${datePart} ${timePart}`; // YYYY-MM-DD HH:mm:ss
+    const match = str.match(/^(\d{4}-\d{2}-\d{2})[T ](\d{2}:\d{2}:\d{2})/);
+    if (!match) return val;
+    return `${match[1]} ${match[2]}`;
   };
+
+  useEffect(() => {
+    logActivity({
+      activity: "NFMT Device Details Report page opened",
+      actionName: "NFMT_NE_LIST",
+      module: "INVENTORY",
+    });
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axiosClient.get(
-          `${FETCH_INVENTORY_NFMT_DEVICE_DETAILS_DATA}`
-        );
-
+        const response = await axiosClient.get(`${FETCH_INVENTORY_NFMT_DEVICE_DETAILS_DATA}`, {});
         let apiData = response.data;
         console.log("Fetched NFMT Device Details Report Data:", apiData);
 
-        // Standard normalization
         if (apiData && !Array.isArray(apiData)) {
-          apiData =
-            apiData.data ||
-            apiData.result ||
-            apiData.results ||
-            apiData.items;
+          apiData = apiData.data || apiData.result || apiData.results || apiData.items;
         }
 
         if (!Array.isArray(apiData)) {
@@ -66,24 +59,14 @@ const NfmtDeviceDetailsReport: React.FC = () => {
 
         const updated = apiData.map((item) => {
           const copy = { ...item };
-
-          copy["Creation Time"] = formatToSimpleDateTime(
-            copy["Creation Time"]
-          );
-          copy["Collection Time"] = formatToSimpleDateTime(
-            copy["Collection Time"]
-          );
-          copy["OSS Insertion Time"] = formatToSimpleDateTime(
-            copy["OSS Insertion Time"]
-          );
-
+          copy["Creation Time"] = formatToSimpleDateTime(copy["Creation Time"]);
+          copy["Collection Time"] = formatToSimpleDateTime(copy["Collection Time"]);
+          copy["OSS Insertion Time"] = formatToSimpleDateTime(copy["OSS Insertion Time"]);
           return copy;
         });
 
-        // --------- DYNAMIC COLUMNS LOGIC HERE ----------
         if (updated.length > 0) {
-          const keys = Object.keys(updated[0]); // extract columns dynamically
-          setColumnOrder(keys);
+          setColumnOrder(Object.keys(updated[0]));
         }
 
         setTableData(updated);
@@ -99,86 +82,66 @@ const NfmtDeviceDetailsReport: React.FC = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        backgroundColor: "#fff",
-        minHeight: "100vh",
-        padding: "1vh",
-        maxWidth: "100vw",
-        overflow: "hidden",
-      }}
-    >
-      {/* -------- Header Section -------- */}
-      <Grid
-        container
-        spacing="1vh"
-        alignItems="center"
-        sx={{ mb: "2vh", mt: "1vh" }}
+    <Box sx={{ backgroundColor: "#ffffff", height: "100%", width: "100%", display: "flex", flexDirection: "column" }}>
+      <Box
+        sx={{
+          padding: "0",
+          m: 0,
+          width: "100%",
+          height: "calc(100vh - 72px)", // Shared workspace available layout boundaries
+          overflow: "hidden",
+          position: "relative",
+        }}
       >
-        <Grid size={{ xs: 12, md: 4 }}>
-          <ExcelDownloadButton
-            data={tableData}
-            columnOrder={columnOrder}
+        {loading ? (
+          <FullPageLoader message="Loading NFMT Device Details Report..." />
+        ) : (
+          <InvReportTable
+            dataObjects={tableData}
+            pageSize={25}
             tableId={TABLE_ID}
-            fileName="Device_Details_Report"
-          />
-        </Grid>
+            renderTopToolbarCustomActions={() => (
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, flexWrap: 'nowrap' }}>
+                
+                {/* Embedded Dynamic Sidebar Open Controller Trigger */}
+                {!open && handleDrawerOpen && (
+                  <IconButton
+                    onClick={handleDrawerOpen}
+                    size="small"
+                    sx={{
+                      bgcolor: "#f1f5f9", color: "#475569", width: 32, height: 32, borderRadius: 1.5, border: "1px solid #e2e8f0",
+                      "&:hover": { bgcolor: "#e2e8f0" },
+                    }}
+                  >
+                    <Menu size={18} strokeWidth={2.5} />
+                  </IconButton>
+                )}
 
-        <Grid size={{ xs: 12, md: 4 }} sx={{ textAlign: "center" }}>
-          <Box
-            sx={{
-              backgroundColor: "#D3D3D3",
-              color: "#000",
-              padding: "1vh 2vh",
-              height: "4vh",
-              borderRadius: "2vh",
-              display: "inline-block",
-              fontWeight: 500,
-              fontSize: "1vw",
-            }}
-          >
-            NE LIST REPORT
-          </Box>
-        </Grid>
+                <ExcelDownloadButton
+                  data={tableData}
+                  columnOrder={columnOrder}
+                  tableId={TABLE_ID}
+                  fileName="Device_Details_Report"
+                />
 
-        <Grid
-          size={{ xs: 12, md: 4 }}
-          sx={{ textAlign: "right", pr: "1vh" }}
-        ></Grid>
-      </Grid>
-
-      <Divider />
-
-      {/* -------- Table Section -------- */}
-      <Grid container spacing="0.2vh">
-        <Grid size={{ xs: 12 }}>
-          <Box
-            sx={{
-              padding: "0",
-              position: "absolute",
-              maxHeight: "80vh",
-              maxWidth: !open ? "calc(100vw - 40px)" : "calc(100vw - 260px)",
-              overflowY: "auto",
-              overflowX: "auto",
-            }}
-          >
-            {loading ? (
-              <Box sx={{ textAlign: "center", padding: "2rem" }}>
-                Loading...
+                {/* Center-locked header text title with single-line truncation parameters */}
+                <Typography 
+                  title="NOKIA - NE LIST REPORT"
+                  sx={{ 
+                    fontSize: '0.8rem', fontWeight: 700, color: '#334155', textTransform: 'uppercase', letterSpacing: '0.04em',
+                    position: 'absolute', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', pointerEvents: 'auto',
+                    whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: open ? '35vw' : '50vw'
+                  }}
+                >
+                  NOKIA - NE LIST REPORT
+                </Typography>
               </Box>
-            ) : (
-              <CommonTable
-                columnOrder={columnOrder}
-                dataObjects={tableData}
-                pageSize={25}
-                onRowClick={undefined}
-                tableId={TABLE_ID}
-              />
             )}
-          </Box>
-        </Grid>
-      </Grid>
-    </div>
+          />
+        )}
+      </Box>
+    </Box>
   );
 };
+
 export default NfmtDeviceDetailsReport;

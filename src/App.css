@@ -6,3 +6,30 @@ html, body {
   width: 100%;
 }
 
+/* Topology Utility Theme Variables */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 212 28% 25%;
+  --card: 0 0% 100%;
+  --card-foreground: 212 28% 25%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 212 28% 25%;
+  --primary: 343 71% 41%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 21 85% 54%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 210 11% 65%;
+  --muted-foreground: 212 28% 40%;
+  --accent: 212 35% 31%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 210 16% 90%;
+  --input: 210 16% 93%;
+  --ring: 343 71% 41%;
+  --radius: 0.5rem;
+  --success: 142 76% 36%;
+  --success-foreground: 0 0% 100%;
+  --warning: 21 85% 54%;
+  --warning-foreground: 0 0% 100%;
+}
